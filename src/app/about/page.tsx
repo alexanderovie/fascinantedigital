@@ -1,5 +1,3 @@
-import React from 'react';
-
 import AboutHero from '@/components/sections/about-hero';
 import Partners from '@/components/sections/partners';
 import Team from '@/components/sections/team';
@@ -9,19 +7,19 @@ import Values from '@/components/sections/values';
 const METRICS = [
   {
     value: '500+',
-    label: 'Active users',
+    label: 'Usuarios activos',
   },
   {
     value: '99.9%',
-    label: 'Uptime for productivity',
+    label: 'Tiempo activo de productividad',
   },
   {
     value: '20+',
-    label: 'Industry awards',
+    label: 'Premios de la industria',
   },
   {
     value: '100+',
-    label: 'Integrations',
+    label: 'Integraciones',
   },
 ];
 

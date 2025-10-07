@@ -3,12 +3,12 @@
 import React from 'react';
 
 import {
-  Rocket,
+  BadgeCheck,
+  BadgeDollarSign,
   Briefcase,
   Building,
-  BadgeDollarSign,
-  BadgeCheck,
   LucideIcon,
+  Rocket,
 } from 'lucide-react';
 
 import SectionHeader from '../section-header';
@@ -39,83 +39,83 @@ interface FeatureSection {
 const pricingPlans: PricingPlan[] = [
   {
     icon: Rocket,
-    name: 'Basic plan',
+    name: 'Plan Básico',
     price: {
       monthly: 19,
       yearly: 199,
     },
     features: [
-      'Basic task management tools',
-      'Calendar sync with limited integrations',
-      'Access to 1 dashboard for tracking tasks',
-      'Limited AI suggestions and insights',
-      'Basic support and community access',
+      'Herramientas básicas de gestión de tareas',
+      'Sincronización de calendario con integraciones limitadas',
+      'Acceso a 1 dashboard para rastrear tareas',
+      'Sugerencias e insights de IA limitados',
+      'Soporte básico y acceso a la comunidad',
     ],
   },
   {
     icon: Briefcase,
-    name: 'Business plan',
+    name: 'Plan Negocios',
     price: {
       monthly: 29,
       yearly: 299,
     },
     features: [
-      'All Free Plan features, plus:',
-      'Unlimited task lists',
-      'Advanced calendar sync',
-      'AI-driven insights',
-      'Access to custom dashboards',
-      'Priority email support',
+      'Todas las funciones del Plan Gratis, más:',
+      'Listas de tareas ilimitadas',
+      'Sincronización avanzada de calendario',
+      'Insights impulsados por IA',
+      'Acceso a dashboards personalizados',
+      'Soporte prioritario por email',
     ],
   },
   {
     icon: Building,
-    name: 'Enterprise plan',
+    name: 'Plan Empresarial',
     price: {
       monthly: 49,
       yearly: 499,
     },
     features: [
-      'All Pro Plan features, plus:',
-      'Dedicated account manager',
-      'Custom integrations',
-      'Real-time collaboration',
-      'Role-based permissions',
-      '24/7 priority support',
+      'Todas las funciones del Plan Pro, más:',
+      'Gerente de cuenta dedicado',
+      'Integraciones personalizadas',
+      'Colaboración en tiempo real',
+      'Permisos basados en roles',
+      'Soporte prioritario 24/7',
     ],
   },
 ];
 
 const comparisonFeatures: FeatureSection[] = [
   {
-    category: 'Core Tools',
+    category: 'Herramientas Principales',
     features: [
       {
-        name: 'Task Management',
+        name: 'Gestión de Tareas',
         basic: '10',
         business: '25',
-        enterprise: 'Unlimited',
+        enterprise: 'Ilimitado',
       },
       {
-        name: 'Calendar Sync',
+        name: 'Sincronización de Calendario',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Reminders',
+        name: 'Recordatorios',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Collaboration',
+        name: 'Colaboración',
         basic: false,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Notifications',
+        name: 'Notificaciones',
         basic: false,
         business: false,
         enterprise: true,
@@ -123,34 +123,34 @@ const comparisonFeatures: FeatureSection[] = [
     ],
   },
   {
-    category: 'Productivity Insights',
+    category: 'Insights de Productividad',
     features: [
       {
-        name: 'Analytics',
-        basic: '10 25 Unlimited',
-        business: '10 25 Unlimited',
-        enterprise: '10 25 Unlimited',
+        name: 'Analíticas',
+        basic: '10 25 Ilimitado',
+        business: '10 25 Ilimitado',
+        enterprise: '10 25 Ilimitado',
       },
       {
-        name: 'Reports',
+        name: 'Reportes',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Time Tracking',
+        name: 'Rastreo de Tiempo',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Goal Tracking',
+        name: 'Rastreo de Objetivos',
         basic: false,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Trends',
+        name: 'Tendencias',
         basic: false,
         business: false,
         enterprise: true,
@@ -158,34 +158,34 @@ const comparisonFeatures: FeatureSection[] = [
     ],
   },
   {
-    category: 'Workflow Automation',
+    category: 'Automatización de Flujo',
     features: [
       {
-        name: 'Task Automation',
+        name: 'Automatización de Tareas',
         basic: '10',
         business: '25',
-        enterprise: 'Unlimited',
+        enterprise: 'Ilimitado',
       },
       {
-        name: 'Recurring Tasks',
+        name: 'Tareas Recurrentes',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Integrations',
+        name: 'Integraciones',
         basic: true,
         business: true,
         enterprise: true,
       },
       {
-        name: 'API Access',
+        name: 'Acceso API',
         basic: false,
         business: true,
         enterprise: true,
       },
       {
-        name: 'Workflow Templates',
+        name: 'Plantillas de Flujo',
         basic: false,
         business: false,
         enterprise: true,
@@ -204,10 +204,10 @@ const Pricing = ({ withBorders = true }: { withBorders?: boolean }) => {
           className={
             withBorders ? '' : 'border-none lg:items-center lg:text-center'
           }
-          iconTitle="Spenders Lounge"
-          title="Pricing for everyone"
+          iconTitle="Salón de Precios"
+          title="Precios para todos"
           icon={BadgeDollarSign}
-          description="Choose the Plan that Fits Your Productivity Needs"
+          description="Elige el Plan que se Ajuste a tus Necesidades de Productividad"
         />
       </div>
 
@@ -232,14 +232,14 @@ const Pricing = ({ withBorders = true }: { withBorders?: boolean }) => {
                   onClick={() => setIsMonthly(true)}
                   className="transition-colors"
                 >
-                  Monthly
+                  Mensual
                 </Button>
                 <Button
                   variant={!isMonthly ? 'default' : 'outline'}
                   onClick={() => setIsMonthly(false)}
                   className="transition-colors"
                 >
-                  Yearly
+                  Anual
                 </Button>
               </div>
             </div>
@@ -284,7 +284,7 @@ const PricingCard = ({
       <FeatureList features={plan.features} />
 
       <Button variant={index === 1 ? 'default' : 'secondary'} className="mt-12">
-        Get started
+        Comenzar
       </Button>
     </div>
   );
@@ -316,7 +316,7 @@ const PriceDisplay = ({
 
 const FeatureList = ({ features }: { features: string[] }) => (
   <div className="pt-6">
-    <h4 className="text-muted-foreground-subtle">Features Included</h4>
+    <h4 className="text-muted-foreground-subtle">Funciones Incluidas</h4>
     <ul className="mt-4 space-y-4">
       {features.map((feature, index) => (
         <li key={index} className="flex items-center gap-4">
@@ -343,7 +343,7 @@ const PlanHeaders = ({ isMonthly }: { isMonthly: boolean }) => (
             </div>
             <PriceDisplay plan={plan} isMonthly={isMonthly} />
           </div>
-          <Button className="mt-auto">Get started</Button>
+          <Button className="mt-auto">Comenzar</Button>
         </div>
       ))}
     </div>

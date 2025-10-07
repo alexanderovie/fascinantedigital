@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { FcGoogle } from 'react-icons/fc';
 
 import { Button } from '@/components/ui/button';
@@ -14,25 +16,25 @@ const LoginSection = () => {
         <div className="flex flex-col gap-4">
           <Card className="mx-auto w-full max-w-sm">
             <CardHeader className="flex flex-col items-center space-y-0">
-              <img
+              <Image
                 src="/images/logo.svg"
                 alt="logo"
                 width={94}
                 height={18}
                 className="mb-7 dark:invert"
               />
-              <p className="mb-2 text-2xl font-bold">Welcome back</p>
+              <p className="mb-2 text-2xl font-bold">Bienvenido de Vuelta</p>
               <p className="text-muted-foreground">
-                Please enter your details.
+                Por favor ingresa tus datos.
               </p>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
-                <Input type="email" placeholder="Enter your email" required />
+                <Input type="email" placeholder="Ingresa tu email" required />
                 <div>
                   <Input
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder="Ingresa tu contraseña"
                     required
                   />
                 </div>
@@ -46,25 +48,25 @@ const LoginSection = () => {
                       htmlFor="remember"
                       className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
-                      Remember me
+                      Recuérdame
                     </label>
                   </div>
                   <a href="#" className="text-primary text-sm font-medium">
-                    Forgot password
+                    ¿Olvidaste tu contraseña?
                   </a>
                 </div>
                 <Button type="submit" className="mt-2 w-full">
-                  Create an account
+                  Ingresar
                 </Button>
                 <Button variant="outline" className="w-full">
                   <FcGoogle className="mr-2 size-5" />
-                  Sign up with Google
+                  Ingresar con Google
                 </Button>
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                <p>Don&apos;t have an account?</p>
+                <p>¿No tienes una cuenta?</p>
                 <a href="/signup" className="text-primary font-medium">
-                  Sign up
+                  Regístrate
                 </a>
               </div>
             </CardContent>

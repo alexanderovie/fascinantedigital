@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Eye } from 'lucide-react';
 
 import OptimizeList from '../optimize-list';
@@ -10,11 +8,11 @@ const Optimize = () => {
     <section id="optimized-scheduling" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Optimize"
-          title="Optimize every aspect of your day"
+          iconTitle="Optimiza"
+          title="Optimiza cada aspecto de tu día"
           icon={Eye}
           description={
-            'Achieve seamless productivity with intelligent scheduling, insightful analytics, and effortless integrations.'
+            'Logra productividad perfecta con programación inteligente, analíticas perspicaces e integraciones sin esfuerzo.'
           }
         />
       </div>

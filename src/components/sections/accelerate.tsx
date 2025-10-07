@@ -1,14 +1,12 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 import {
+  Cpu,
   LayoutList,
   LocateFixed,
-  Users,
-  Cpu,
-  Rocket,
   LucideIcon,
+  Rocket,
+  Users,
 } from 'lucide-react';
 
 import DiagonalPattern from '../diagonal-pattern';
@@ -16,44 +14,44 @@ import SectionHeader from '../section-header';
 
 const TIMELINE_ITEMS = [
   {
-    title: 'Get Organized',
+    title: 'Organízate',
     description:
-      'Start strong by syncing your calendars and tools like Google Calendar, Trello, and Slack in one place.',
+      'Comienza fuerte sincronizando tus calendarios y herramientas como Google Calendar, Trello y Slack en un solo lugar.',
     icon: LayoutList,
     image: {
       src: '/images/homepage/accelerate-1.png',
-      alt: 'Get Organized',
+      alt: 'Organízate',
     },
   },
   {
-    title: 'Track Progress',
+    title: 'Rastrea el Progreso',
     description:
-      'Monitor your performance with real-time dashboards and detailed analytics. Stay ahead with automated reports.',
+      'Monitorea tu rendimiento con dashboards en tiempo real y analíticas detalladas. Mantente adelante con reportes automatizados.',
     icon: LocateFixed,
     image: {
       src: '/images/homepage/accelerate-2.png',
-      alt: 'Track Progress',
+      alt: 'Rastrea el Progreso',
     },
     reverse: true,
   },
   {
-    title: 'Collaborate Seamlessly',
+    title: 'Colabora Sin Esfuerzo',
     description:
-      'Empower your team with shared dashboards and instant communication tools. Keep everyone aligned with integrated platforms.',
+      'Empodera a tu equipo con dashboards compartidos y herramientas de comunicación instantánea. Mantén a todos alineados con plataformas integradas.',
     icon: Users,
     image: {
       src: '/images/homepage/accelerate-3.png',
-      alt: 'Collaborate Seamlessly',
+      alt: 'Colabora Sin Esfuerzo',
     },
   },
   {
-    title: 'Integrate Seamlessly',
+    title: 'Integra Sin Esfuerzo',
     description:
-      'Integrate seamlessly across multiple platforms to enable smooth, automated task handovers.',
+      'Integra perfectamente a través de múltiples plataformas para habilitar transferencias de tareas suaves y automatizadas.',
     icon: Cpu,
     image: {
       src: '/images/homepage/accelerate-4.png',
-      alt: 'Integrate Seamlessly',
+      alt: 'Integra Sin Esfuerzo',
     },
     reverse: true,
   },
@@ -64,11 +62,11 @@ const Accelerate = () => {
     <section id="accelerate-planning" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Accelerate"
-          title="Accelerate your planning journey"
+          iconTitle="Acelera"
+          title="Acelera tu proceso de planificación"
           icon={Rocket}
           description={
-            'Take control of your workflow step-by-step with smart tools, actionable insights, and seamless collaboration'
+            'Toma control de tu flujo de trabajo paso a paso con herramientas inteligentes, insights accionables y colaboración perfecta'
           }
         />
       </div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Shapes } from 'lucide-react';
 
 import AdaptiveList from '../adaptive-list';
@@ -10,11 +8,11 @@ const Adaptive = () => {
     <section id="adaptive-workflows" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Adaptive"
-          title="Stay agile with adaptive workflows"
+          iconTitle="Adaptativo"
+          title="Mantente ágil con flujos adaptativos"
           icon={Shapes}
           description={
-            'AI streamlines your processes to adjust as priorities shift.'
+            'La IA optimiza tus procesos para ajustarse cuando las prioridades cambian.'
           }
         />
       </div>

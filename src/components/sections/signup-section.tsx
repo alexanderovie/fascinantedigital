@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { FcGoogle } from 'react-icons/fc';
 
 import { Button } from '@/components/ui/button';
@@ -13,44 +15,46 @@ const SignupSection = () => {
         <div className="flex flex-col gap-4">
           <Card className="mx-auto w-full max-w-sm">
             <CardHeader className="flex flex-col items-center space-y-0">
-              <img
+              <Image
                 src="/images/logo.svg"
                 alt="logo"
                 width={94}
                 height={18}
                 className="mb-7 dark:invert"
               />
-              <p className="mb-2 text-2xl font-bold">Start your free trial</p>
+              <p className="mb-2 text-2xl font-bold">
+                Inicia tu Prueba Gratuita
+              </p>
               <p className="text-muted-foreground">
-                Sign up in less than 2 minutes.
+                Regístrate en menos de 2 minutos.
               </p>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
-                <Input type="text" placeholder="Enter your name" required />
-                <Input type="email" placeholder="Enter your email" required />
+                <Input type="text" placeholder="Ingresa tu nombre" required />
+                <Input type="email" placeholder="Ingresa tu email" required />
                 <div>
                   <Input
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder="Ingresa tu contraseña"
                     required
                   />
                   <p className="text-muted-foreground mt-1 text-sm">
-                    Must be at least 8 characters.
+                    Debe tener al menos 8 caracteres.
                   </p>
                 </div>
                 <Button type="submit" className="mt-2 w-full">
-                  Create an account
+                  Crear Cuenta
                 </Button>
                 <Button variant="outline" className="w-full">
                   <FcGoogle className="mr-2 size-5" />
-                  Sign up with Google
+                  Registrarse con Google
                 </Button>
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                <p>Already have an account?</p>
+                <p>¿Ya tienes una cuenta?</p>
                 <a href="/login" className="text-primary font-medium">
-                  Log in
+                  Ingresar
                 </a>
               </div>
             </CardContent>

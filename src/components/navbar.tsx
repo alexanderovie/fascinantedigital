@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,35 +29,35 @@ const Navbar = () => {
 
   const navLinks = [
     {
-      label: 'Features',
+      label: 'Características',
       href: '#features',
       dropdownItems: [
         {
-          title: 'Smart Productivity',
+          title: 'Productividad Inteligente',
           href: '/#smart-productivity',
-          description: 'Boost your productivity with AI-powered insights',
+          description: 'Aumenta tu productividad con insights de IA',
         },
         {
-          title: 'Adaptive Workflows',
+          title: 'Flujos Adaptativos',
           href: '/#adaptive-workflows',
-          description: 'Customize and automate your work processes',
+          description: 'Personaliza y automatiza tus procesos',
         },
         {
-          title: 'Optimized Scheduling',
+          title: 'Programación Optimizada',
           href: '/#optimized-scheduling',
-          description: 'Intelligent time management and scheduling',
+          description: 'Gestión inteligente de tiempo y agenda',
         },
         {
-          title: 'Accelerate Planning',
+          title: 'Acelera tu Planificación',
           href: '/#accelerate-planning',
-          description: 'Strategic planning tools for faster execution',
+          description: 'Herramientas de planificación estratégica',
         },
       ],
     },
-    { label: 'About us', href: '/about' },
-    { label: 'Pricing', href: '/pricing' },
+    { label: 'Nosotros', href: '/about' },
+    { label: 'Precios', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Contacto', href: '/contact' },
   ];
 
   return (
@@ -67,13 +67,11 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={32}
-              height={32}
-              className="dark:invert"
+              src="/logo-fascinante.svg"
+              alt="Fascinante Digital Logo"
+              width={180}
+              height={40}
             />
-            <span className="text-2xl leading-0 font-semibold">Relative</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -136,7 +134,7 @@ const Navbar = () => {
             </div>
             <Link href="/login" className="hidden lg:block">
               <Button variant="outline" className="gap-1">
-                Login
+                Ingresar
                 <ChevronRight className="size-4" />
               </Button>
             </Link>
@@ -145,7 +143,7 @@ const Navbar = () => {
               className={`transition-opacity duration-300 ${isMenuOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
             >
               <Button className="gap-1">
-                Sign up
+                Registrarse
                 <ChevronRight className="size-4" />
               </Button>
             </Link>
@@ -155,7 +153,7 @@ const Navbar = () => {
               className="text-muted-foreground relative flex h-8 w-8 lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Abrir menú principal</span>
               <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2 transform">
                 <span
                   aria-hidden="true"
@@ -190,7 +188,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <Button size="sm" className="w-full">
-              Sign up
+              Registrarse
             </Button>
           </Link>
           <Link
@@ -199,7 +197,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <Button size="sm" className="w-full" variant="outline">
-              Login
+              Ingresar
             </Button>
           </Link>
         </div>

@@ -16,15 +16,15 @@ export default function Hero() {
         </BorderedSection>
         <div className="container mx-auto pt-16 pb-12 text-center md:pt-20 lg:pt-28">
           <h1 className="mx-auto max-w-[500px] text-[2.5rem] leading-[1.2] tracking-[-1.6px] text-balance md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-            Say Goodbye to Task Overload
+            Di Adiós a la Sobrecarga de Tareas
           </h1>
           <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
-            Prioritize, automate, and stay ahead—AI simplifies your tasks so you
-            can focus on what matters most.
+            Prioriza, automatiza y mantente adelante—la IA simplifica tus tareas
+            para que te enfoques en lo que más importa.
           </p>
           <Button asChild className="mt-6 gap-1 md:mt-8 lg:mt-10">
             <Link href="/dashboard">
-              Get started
+              Comenzar
               <ChevronRight className="size-4" />
             </Link>
           </Button>

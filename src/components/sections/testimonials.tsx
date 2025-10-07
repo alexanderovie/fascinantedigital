@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 import { Handshake } from 'lucide-react';
@@ -16,10 +14,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Our team at Zerostatic relies heavily on automation, and this app takes it to another level. It&apos;s like having a virtual assistant built right into my workflow.',
+      'Nuestro equipo en Zerostatic depende mucho de la automatización, y esta app lo lleva a otro nivel. Es como tener un asistente virtual integrado en mi flujo de trabajo.',
     author: {
       name: 'Abdulsalam Abdulsalam',
-      role: 'Product Designer, Zerostatic',
+      role: 'Diseñador de Producto, Zerostatic',
       image: '/images/testimonials/1.png',
     },
   },
@@ -31,10 +29,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'I especially love the seamless calendar integrations and advanced task management features keep everyone aligned and organized.',
+      'Me encanta especialmente las integraciones de calendario perfectas y las funciones avanzadas de gestión de tareas que mantienen a todos alineados y organizados.',
     author: {
       name: 'Emma Lee',
-      role: 'Product Manager, Notion',
+      role: 'Gerente de Producto, Notion',
       image: '/images/testimonials/2.png',
     },
   },
@@ -46,10 +44,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'We needed a productivity app that could grow with our team&apos;s evolving needs, this has been the perfect fit. The automation tools have saved us hours.',
+      'Necesitábamos una app de productividad que creciera con las necesidades de nuestro equipo, esta ha sido el ajuste perfecto. Las herramientas de automatización nos han ahorrado horas.',
     author: {
       name: 'Ryan Chen',
-      role: 'Operations Lead, Slack',
+      role: 'Líder de Operaciones, Slack',
       image: '/images/testimonials/3.png',
     },
   },
@@ -61,10 +59,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'This platform has been invaluable for managing projects across distributed teams. Its integration with our existing tools makes setup easy.',
+      'Esta plataforma ha sido invaluable para gestionar proyectos entre equipos distribuidos. Su integración con nuestras herramientas existentes hace la configuración fácil.',
     author: {
       name: 'Ryan Patel',
-      role: 'Engineering Manager, GitHub',
+      role: 'Gerente de Ingeniería, GitHub',
       image: '/images/testimonials/4.png',
     },
   },
@@ -76,10 +74,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'As a designer, I appreciate how intuitive and visually appealing this app is. It simplifies task management without sacrificing powerful features.',
+      'Como diseñador, aprecio lo intuitiva y visualmente atractiva que es esta app. Simplifica la gestión de tareas sin sacrificar funciones poderosas.',
     author: {
       name: 'Carlos Diaz',
-      role: 'Design Lead, Figma',
+      role: 'Líder de Diseño, Figma',
       image: '/images/testimonials/5.png',
     },
   },
@@ -91,10 +89,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'The smart reminders and automated scheduling keep our team focused and on track. We&apos;ve also found the collaborative features to be very helpful.',
+      'Los recordatorios inteligentes y la programación automatizada mantienen a nuestro equipo enfocado y en el camino. También hemos encontrado las funciones colaborativas muy útiles.',
     author: {
       name: 'Matthew Kim',
-      role: 'Content Strategist, Loom',
+      role: 'Estratega de Contenido, Loom',
       image: '/images/testimonials/6.png',
     },
   },
@@ -105,10 +103,10 @@ const Testimonials = ({ withBorders = true }: { withBorders?: boolean }) => {
     <section className="">
       <div className={withBorders ? 'border-b' : ''}>
         <SectionHeader
-          iconTitle="lovin' it"
-          title="What industry experts are saying"
+          iconTitle="nos aman"
+          title="Lo que dicen los expertos de la industria"
           icon={Handshake}
-          description="Trusted by Professionals from Leading Tech Companies"
+          description="Confiado por Profesionales de Empresas Tecnológicas Líderes"
           className={withBorders ? '' : 'border-none'}
         />
       </div>

@@ -1,9 +1,8 @@
 'use client';
-import React from 'react';
 
 import Image from 'next/image';
 
-import { CircleHelp, Volume2, Lightbulb } from 'lucide-react';
+import { CircleHelp, Lightbulb, Volume2 } from 'lucide-react';
 
 import DiagonalPattern from './diagonal-pattern';
 
@@ -12,23 +11,23 @@ import { cn } from '@/lib/utils';
 
 const OPTIMIZE_DATA = [
   {
-    title: 'Unified Scheduling',
+    title: 'Programación Unificada',
     description:
-      'Keep all your appointments and events in sync with seamless cross-platform calendar connectivity.',
+      'Mantén todas tus citas y eventos sincronizados con conectividad de calendario perfecta entre plataformas.',
     icon: CircleHelp,
     image: '/images/homepage/optimize-1.png',
   },
   {
-    title: 'Insightful Performance',
+    title: 'Rendimiento con Insights',
     description:
-      'Get clear, real-time analytics tracking your progress, key milestones, focus hours, and completed tasks.',
+      'Obtén analíticas claras en tiempo real que rastreen tu progreso, hitos clave, horas de enfoque y tareas completadas.',
     icon: Volume2,
     image: '/images/homepage/optimize-2.png',
   },
   {
-    title: 'Effortless Tool Integrations',
+    title: 'Integraciones Sin Esfuerzo',
     description:
-      'Link your favorite apps and services to streamline work without switching between platforms.',
+      'Conecta tus aplicaciones y servicios favoritos para optimizar el trabajo sin cambiar entre plataformas.',
     icon: Lightbulb,
     image: '/images/homepage/optimize-3.png',
   },

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { PocketKnife } from 'lucide-react';
 
 import FeaturesList from '../features-list';
@@ -10,11 +8,11 @@ const Features = () => {
     <section id="smart-productivity" className="pt-12 lg:pt-20">
       <div className="border-y">
         <SectionHeader
-          iconTitle="Features"
-          title="Smart productivity with AI"
+          iconTitle="Características"
+          title="Productividad inteligente con IA"
           icon={PocketKnife}
           description={
-            'Unlock smarter productivity with features that help you manage tasks, time, and focus—seamlessly.'
+            'Desbloquea productividad más inteligente con funciones que te ayudan a gestionar tareas, tiempo y enfoque sin complicaciones.'
           }
         />
       </div>

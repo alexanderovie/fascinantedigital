@@ -19,27 +19,27 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description:
-      "Have a question or need help? Drop us an email, and we'll respond within 24 hours.",
-    contact: 'hello@relative.io',
+      '¿Tienes una pregunta o necesitas ayuda? Envíanos un email y responderemos en 24 horas.',
+    contact: 'inf0@fascinantedigital.com',
   },
   {
     icon: Phone,
-    title: 'Phone',
+    title: 'Teléfono',
     description:
-      'Prefer to chat? Give us a call Monday–Friday, 9 AM–5 PM (PST).',
-    contact: '+1 (123) 456-7890',
+      '¿Prefieres conversar? Llámanos de lunes a viernes, de 8 AM a 5 PM (EST).',
+    contact: '(8OO) 886-4981',
   },
   {
     icon: Building,
-    title: 'Office',
+    title: 'Oficina',
     description:
-      'Stop by our office @ 123 Productivity Ave, San Francisco, CA 94105',
+      'Visita nuestra oficina en 2054 Vista Pkwy #400, West Palm Beach, FL 33411',
     contact: (
       <Link
         href="#"
         className="text-foreground inline-flex items-center gap-1 text-sm font-medium hover:underline"
       >
-        Get Directions
+        Cómo Llegar
         <ChevronRight className="size-4" />
       </Link>
     ),
@@ -49,7 +49,7 @@ const contactMethods = [
 const formFields = [
   {
     id: 'name',
-    label: 'Name',
+    label: 'Nombre',
     type: 'text',
     component: Input,
     required: true,
@@ -63,12 +63,12 @@ const formFields = [
   },
   {
     id: 'message',
-    label: 'Message',
+    label: 'Mensaje',
     component: Textarea,
     required: true,
 
     props: {
-      placeholder: 'Type Your Message...',
+      placeholder: 'Escribe tu mensaje...',
       rows: 4,
     },
   },
@@ -78,9 +78,9 @@ const Contact = () => {
     <section className="py-14 md:py-20 lg:py-24">
       <SectionHeader
         icon={Mail}
-        iconTitle="Reach Out"
-        title="Get in Touch"
-        description="We're here to help—reach out with any questions or feedback."
+        iconTitle="Contáctanos"
+        title="Ponte en Contacto"
+        description="Estamos aquí para ayudar—contáctanos con cualquier pregunta o comentario."
         className="border-none !pb-0"
       />
 
@@ -108,15 +108,15 @@ const Contact = () => {
                 htmlFor="terms"
                 className="text-sm font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
-                I accept the{' '}
+                Acepto los{' '}
                 <Link href="/terms" className="underline">
-                  Terms
+                  Términos
                 </Link>
               </Label>
             </div>
           </div>
 
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Enviar</Button>
         </form>
 
         <div className="grid flex-1 gap-6 self-start lg:grid-cols-2">

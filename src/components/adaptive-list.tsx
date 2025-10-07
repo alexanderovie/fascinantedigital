@@ -1,29 +1,27 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 const DATA = [
   {
-    subTitle: 'Unified Scheduling',
-    title: 'Unified Scheduling',
+    subTitle: 'Programación Unificada',
+    title: 'Programación Unificada',
     description:
-      'Keep all your appointments and events in sync with seamless cross-platform calendar connectivity.',
+      'Mantén todas tus citas y eventos sincronizados con conectividad de calendario perfecta entre plataformas.',
     icon: 'CircleHelp',
     image: '/images/homepage/adaptive-1.png',
   },
   {
-    subTitle: 'Insightful Performance',
-    title: 'Insightful Performance',
+    subTitle: 'Rendimiento con Insights',
+    title: 'Rendimiento con Insights',
     description:
-      'Get clear, real-time analytics tracking your progress, key milestones, focus hours, and completed tasks.',
+      'Obtén analíticas claras en tiempo real que rastreen tu progreso, hitos clave, horas de enfoque y tareas completadas.',
     icon: 'Volume2',
     image: '/images/homepage/adaptive-2.png',
   },
   {
-    subTitle: 'Effortless Tool Integrations',
-    title: 'Effortless Tool Integrations',
+    subTitle: 'Integraciones Sin Esfuerzo',
+    title: 'Integraciones Sin Esfuerzo',
     description:
-      'Link your favorite apps and services to streamline work without switching between platforms.',
+      'Conecta tus aplicaciones y servicios favoritos para optimizar el trabajo sin cambiar entre plataformas.',
     icon: 'Lightbulb',
     image: '/images/homepage/adaptive-3.png',
   },

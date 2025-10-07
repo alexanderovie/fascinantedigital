@@ -1,10 +1,8 @@
 'use client';
 
-import React from 'react';
-
 import Image from 'next/image';
 
-import { SquarePen, CalendarClock, ChartBar } from 'lucide-react';
+import { CalendarClock, ChartBar, SquarePen } from 'lucide-react';
 
 import DiagonalPattern from './diagonal-pattern';
 
@@ -12,23 +10,23 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const FEATURES_DATA = [
   {
-    title: 'Smart Task Management',
+    title: 'Gestión Inteligente de Tareas',
     description:
-      'Create, prioritize, and delegate tasks effortlessly. AI helps you identify what matters most with smart recommendations and automated workflows.',
+      'Crea, prioriza y delega tareas sin esfuerzo. La IA te ayuda a identificar lo más importante con recomendaciones inteligentes y flujos automatizados.',
     icon: SquarePen,
     image: '/images/homepage/features-1.png',
   },
   {
-    title: 'Automated Scheduling',
+    title: 'Programación Automatizada',
     description:
-      'Let AI find the best time slots for meetings, reminders, and tasks based on your calendar and working habits. Stay organized without the hassle.',
+      'Deja que la IA encuentre los mejores horarios para reuniones, recordatorios y tareas según tu calendario y hábitos laborales. Mantente organizado sin complicaciones.',
     icon: CalendarClock,
     image: '/images/homepage/features-2.png',
   },
   {
-    title: 'Personalized Insights',
+    title: 'Insights Personalizados',
     description:
-      'Track your productivity with AI-powered insights. Get weekly summaries and actionable tips to improve your workflow and manage workloads better.',
+      'Rastrea tu productividad con insights de IA. Recibe resúmenes semanales y consejos prácticos para mejorar tu flujo de trabajo y gestionar mejor tus cargas.',
     icon: ChartBar,
     image: '/images/homepage/features-3.png',
   },

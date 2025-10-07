@@ -1,26 +1,24 @@
-import React from 'react';
-
-import { Heart, UserCog, Lightbulb, Shield } from 'lucide-react';
+import { Heart, Lightbulb, Shield, UserCog } from 'lucide-react';
 
 import SectionHeader from '../section-header';
 
 const values = [
   {
-    title: 'User-Centered Design',
+    title: 'Diseño Centrado en el Usuario',
     description:
-      'We prioritize the user experience, ensuring every feature adds real value and is intuitive to use.',
+      'Priorizamos la experiencia del usuario, asegurando que cada función agregue valor real y sea intuitiva de usar.',
     icon: UserCog,
   },
   {
-    title: 'Continuous Innovation',
+    title: 'Innovación Continua',
     description:
-      'We are committed to pushing boundaries, and evolving to meet the needs of modern teams.',
+      'Estamos comprometidos a traspasar límites y evolucionar para satisfacer las necesidades de los equipos modernos.',
     icon: Lightbulb,
   },
   {
-    title: 'Integrity and Transparency',
+    title: 'Integridad y Transparencia',
     description:
-      'We build with honesty and clarity, fostering trust with our users and partners.',
+      'Construimos con honestidad y claridad, fomentando confianza con nuestros usuarios y socios.',
     icon: Shield,
   },
 ];
@@ -29,10 +27,10 @@ const Values = () => {
   return (
     <section>
       <SectionHeader
-        iconTitle="We live by"
-        title="Our Core Values"
+        iconTitle="Vivimos por"
+        title="Nuestros Valores Fundamentales"
         icon={Heart}
-        description="We believe in principles that guide our growth and inspire our community."
+        description="Creemos en principios que guían nuestro crecimiento e inspiran a nuestra comunidad."
         className="border-none"
       />
 

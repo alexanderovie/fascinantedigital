@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const sections = [
   {
@@ -31,13 +31,11 @@ const Footer = () => {
         <div className="mb-8 flex-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={32}
-              height={32}
-              className="dark:invert"
+              src="/logo-fascinante.svg"
+              alt="Fascinante Digital Logo"
+              width={180}
+              height={40}
             />
-            <span className="text-2xl leading-0 font-semibold">Relative</span>
           </Link>
         </div>
         <div className="flex flex-1 justify-between gap-8 max-sm:flex-col">
@@ -76,7 +74,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-muted-foreground-subtle container border-x border-t border-b py-4 text-sm tracking-[-0.28px] lg:py-8">
-        <p>© {new Date().getFullYear()} Relative. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Fascinante Digital. All rights reserved.
+        </p>
       </div>
       <div className="container h-6 border-x"></div>
     </footer>

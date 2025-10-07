@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 const AboutHero = () => {
@@ -11,11 +9,11 @@ const AboutHero = () => {
           <div className="flex-1 lg:border-l">
             <div className="lg:border-b lg:pr-8 lg:pb-5 lg:pl-2">
               <h1 className="mx-auto text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-                Empowering Productivity with Purpose
+                Impulsando Productividad con Propósito
               </h1>
               <p className="text-muted-foreground mt-6 tracking-[-0.32px]">
-                Our mission is to unlock potential by creating tools that
-                elevate productivity and foster seamless collaboration.
+                Nuestra misión es desbloquear el potencial creando herramientas
+                que eleven la productividad y fomenten la colaboración perfecta.
               </p>
             </div>
             <div className="relative mt-10 aspect-[3/3.25] overflow-hidden md:mt-14 lg:mr-8 lg:mb-10 lg:ml-2">
@@ -49,11 +47,12 @@ const AboutHero = () => {
               </div>
             </div>
             <p className="text-muted-foreground mt-10 px-4 tracking-[-0.32px] md:mt-14">
-              Our mission is to enable individuals and teams to achieve their
-              best work by delivering innovative tools that simplify workflows,
-              enhance collaboration, and drive impactful outcomes. We&apos;re
-              dedicated to creating a seamless productivity experience that
-              helps people thrive in their work and reach new heights.
+              Nuestra misión es permitir que individuos y equipos logren su
+              mejor trabajo entregando herramientas innovadoras que simplican
+              flujos de trabajo, mejoran la colaboración e impulsan resultados
+              impactantes. Estamos dedicados a crear una experiencia de
+              productividad perfecta que ayuda a las personas a prosperar en su
+              trabajo y alcanzar nuevas alturas.
             </p>
           </div>
         </div>

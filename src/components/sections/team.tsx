@@ -1,18 +1,16 @@
-import React from 'react';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Users, Twitter, Github } from 'lucide-react';
+import { Github, Twitter, Users } from 'lucide-react';
 
 import SectionHeader from '../section-header';
 
 const teamMembers = [
   {
     name: 'Alex Johnson',
-    role: 'CEO & Founder',
+    role: 'CEO y Fundador',
     image: '/images/team/1.png',
-    bio: 'With a background in software development and a vision for productivity, Alex leads the team with passion on user-first innovation.',
+    bio: 'Con experiencia en desarrollo de software y una visión para la productividad, Alex lidera el equipo con pasión por la innovación centrada en el usuario.',
     social: {
       twitter: '#',
       github: '#',
@@ -20,18 +18,18 @@ const teamMembers = [
   },
   {
     name: 'Jamie Lee',
-    role: 'Chief Product Officer',
+    role: 'Director de Producto',
     image: '/images/team/2.png',
-    bio: 'Jamie brings years of experience in product design and strategy, ensuring each feature meets the highest standards of functionality and design.',
+    bio: 'Jamie aporta años de experiencia en diseño y estrategia de producto, asegurando que cada función cumpla con los más altos estándares de funcionalidad y diseño.',
     social: {
       twitter: '#',
     },
   },
   {
     name: 'Taylor Smith',
-    role: 'Head of Engineering',
+    role: 'Jefe de Ingeniería',
     image: '/images/team/3.png',
-    bio: 'Taylor drives the technical vision, overseeing development and ensuring the product is robust, secure, and scalable for users.',
+    bio: 'Taylor impulsa la visión técnica, supervisando el desarrollo y asegurando que el producto sea robusto, seguro y escalable para los usuarios.',
     social: {
       twitter: '#',
       github: '#',
@@ -39,9 +37,9 @@ const teamMembers = [
   },
   {
     name: 'Morgan Davis',
-    role: 'Marketing Lead',
+    role: 'Líder de Marketing',
     image: '/images/team/4.png',
-    bio: 'With a knack for storytelling and a deep understanding of the market, Morgan communicates our mission and product benefits to the world.',
+    bio: 'Con talento para contar historias y un profundo entendimiento del mercado, Morgan comunica nuestra misión y beneficios del producto al mundo.',
     social: {
       twitter: '#',
     },
@@ -52,10 +50,10 @@ const Team = () => {
   return (
     <section className="">
       <SectionHeader
-        iconTitle="Team up!"
-        title="The Minds Behind the Mission"
+        iconTitle="¡En Equipo!"
+        title="Las Mentes Detrás de la Misión"
         icon={Users}
-        description="A dedicated team passionate about shaping the future of productivity."
+        description="Un equipo dedicado y apasionado por dar forma al futuro de la productividad."
         className={'border-none'}
       />
 

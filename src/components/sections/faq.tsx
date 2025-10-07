@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { MessageCircleQuestion } from 'lucide-react';
 
 import SectionHeader from '../section-header';
@@ -13,34 +11,34 @@ import {
 
 const faqData = [
   {
-    question: 'Is there a free version?',
+    question: '¿Hay una versión gratuita?',
     answer:
-      'Yes! We offer a Free Plan with essential features. You can upgrade anytime for advanced tools and integrations.',
+      '¡Sí! Ofrecemos un Plan Gratis con funciones esenciales. Puedes actualizar en cualquier momento para herramientas avanzadas e integraciones.',
   },
   {
-    question: 'What apps can I integrate?',
+    question: '¿Qué aplicaciones puedo integrar?',
     answer:
-      'Our platform supports integration with various popular apps and services. The specific integrations available depend on your plan level.',
+      'Nuestra plataforma soporta integración con varias aplicaciones y servicios populares. Las integraciones específicas disponibles dependen de tu nivel de plan.',
   },
   {
-    question: 'How does the AI work?',
+    question: '¿Cómo funciona la IA?',
     answer:
-      'Our AI technology uses advanced machine learning algorithms to analyze and process your data, providing intelligent insights and automation capabilities.',
+      'Nuestra tecnología de IA usa algoritmos avanzados de aprendizaje automático para analizar y procesar tus datos, proporcionando insights inteligentes y capacidades de automatización.',
   },
   {
-    question: 'Can I use this with a team?',
+    question: '¿Puedo usar esto con un equipo?',
     answer:
-      'Absolutely! Our platform is designed for both individual and team use. You can easily collaborate and share resources with team members.',
+      '¡Absolutamente! Nuestra plataforma está diseñada para uso individual y de equipo. Puedes colaborar fácilmente y compartir recursos con miembros del equipo.',
   },
   {
-    question: 'Is my data safe?',
+    question: '¿Mis datos están seguros?',
     answer:
-      'We take data security seriously. All data is encrypted and stored securely following industry best practices and compliance standards.',
+      'Tomamos la seguridad de datos en serio. Todos los datos están encriptados y almacenados de forma segura siguiendo las mejores prácticas y estándares de cumplimiento de la industria.',
   },
   {
-    question: 'How do I manage my subscription?',
+    question: '¿Cómo gestiono mi suscripción?',
     answer:
-      'You can manage your subscription easily through your account dashboard, where you can upgrade, downgrade, or modify your plan settings.',
+      'Puedes gestionar tu suscripción fácilmente a través de tu dashboard de cuenta, donde puedes actualizar, bajar de nivel o modificar la configuración de tu plan.',
   },
 ];
 
@@ -55,12 +53,12 @@ const Faq = ({ withBorders = true }: { withBorders?: boolean }) => {
               : '!max-w-[480px] !border-none lg:items-center lg:text-center'
           }
           iconTitle="FAQ"
-          title="Everything You Need to Know"
+          title="Todo lo que Necesitas Saber"
           icon={MessageCircleQuestion}
           description={
             <>
-              Looking for quick answers? Check out our{' '}
-              <span className="underline">FAQ section</span>.
+              ¿Buscas respuestas rápidas? Consulta nuestra{' '}
+              <span className="underline">sección de FAQ</span>.
             </>
           }
         />
