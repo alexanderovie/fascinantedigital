@@ -12,7 +12,7 @@ const Optimize = () => {
           title="Haz que te encuentren donde importa"
           icon={Eye}
           description={
-            'Aparece en Google, Maps y búsquedas locales con estrategias optimizadas con APIs profesionales.'
+            'Aparece en las búsquedas, mapas y redes donde tus clientes te están buscando cada día.'
           }
         />
       </div>

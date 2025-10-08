@@ -9,10 +9,10 @@ const Adaptive = () => {
       <div className="border-b">
         <SectionHeader
           iconTitle="Estrategia"
-          title="Cada decisión respaldada por datos"
+          title="Cada decisión basada en datos reales"
           icon={Shapes}
           description={
-            'No actuamos al azar. Tu estrategia se basa en tu ranking real, tendencias locales y comparativas de competencia.'
+            'No trabajamos con suposiciones. Tomamos decisiones con información real sobre tu negocio, tus clientes y tu competencia.'
           }
         />
       </div>

@@ -104,9 +104,9 @@ const Testimonials = ({ withBorders = true }: { withBorders?: boolean }) => {
       <div className={withBorders ? 'border-b' : ''}>
         <SectionHeader
           iconTitle="nos aman"
-          title="Lo que dicen los expertos de la industria"
+          title="Lo que dicen nuestros clientes"
           icon={Handshake}
-          description="Confiado por profesionales de empresas tecnológicas líderes"
+          description="Empresas reales, resultados reales."
           className={withBorders ? '' : 'border-none'}
         />
       </div>

@@ -45,10 +45,10 @@ const pricingPlans: PricingPlan[] = [
       yearly: 199,
     },
     features: [
-      '100 keywords con SERP API (posición y volumen)',
-      'Auditoría técnica completa con OnPage API',
-      'Reporte comparativo con 2 competidores',
-      'Análisis de palabras más buscadas en tu zona',
+      'Revisión completa de tu presencia online',
+      'Análisis de tus palabras clave más valiosas',
+      'Diagnóstico de visibilidad y errores principales',
+      'Comparativo con 2 competidores locales',
       'Soporte por email',
     ],
   },
@@ -61,10 +61,10 @@ const pricingPlans: PricingPlan[] = [
     },
     features: [
       'Todo del plan Esencial, más:',
-      'Monitoreo en vivo de posicionamientos',
-      'Seguimiento de backlinks (nuevos y perdidos)',
-      'Análisis de local pack y reseñas',
-      'Dashboard con métricas en tiempo real',
+      'Monitoreo constante de tu crecimiento',
+      'Seguimiento de enlaces y reputación',
+      'Evaluación de reseñas y presencia local',
+      'Panel de resultados actualizado cada semana',
       'Soporte prioritario',
     ],
   },
@@ -77,11 +77,11 @@ const pricingPlans: PricingPlan[] = [
     },
     features: [
       'Todo del plan Pro, más:',
-      'Todas las APIs: SERP, Backlinks, OnPage, Business Data',
-      'Dashboard 24/7 con datos de tu nicho',
-      'Comparativas y recomendaciones personalizadas',
-      'Gerente de cuenta dedicado',
-      'Soporte 24/7',
+      'Análisis completo de todo tu sector',
+      'Revisión de posicionamiento y campañas en tiempo real',
+      'Reporte personalizado mensual',
+      'Acompañamiento estratégico 1 a 1',
+      'Soporte 24/7 y asesoría continua',
     ],
   },
 ];
@@ -205,9 +205,9 @@ const Pricing = ({ withBorders = true }: { withBorders?: boolean }) => {
             withBorders ? '' : 'border-none lg:items-center lg:text-center'
           }
           iconTitle="Planes"
-          title="Planes hechos para marcas que quieren dominar"
+          title="Planes hechos para crecer contigo"
           icon={BadgeDollarSign}
-          description="Cada nivel incluye acceso a herramientas que otras agencias cobran $300-500/mes."
+          description="Elige el plan que se adapta a tu negocio y empieza a ver resultados reales."
         />
       </div>
 

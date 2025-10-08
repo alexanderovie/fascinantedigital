@@ -9,10 +9,10 @@ const Features = () => {
       <div className="border-y">
         <SectionHeader
           iconTitle="Herramientas"
-          title="Herramientas gratuitas con datos reales"
+          title="Analiza gratis cómo está tu negocio online"
           icon={PocketKnife}
           description={
-            'Obtén reportes instantáneos basados en APIs profesionales—sin compromiso.'
+            'Obtén un análisis real de tu presencia digital—rápido, claro y sin compromiso.'
           }
         />
       </div>

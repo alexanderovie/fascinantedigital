@@ -59,12 +59,12 @@ const Faq = ({ withBorders = true }: { withBorders?: boolean }) => {
               : '!max-w-[480px] !border-none lg:items-center lg:text-center'
           }
           iconTitle="FAQ"
-          title="Preguntas Frecuentes"
+          title="Preguntas frecuentes"
           icon={MessageCircleQuestion}
           description={
             <>
-              Resolvemos tus dudas sobre datos, herramientas y análisis en{' '}
-              <span className="underline">tiempo real</span>.
+              Resolvemos las dudas más comunes sobre{' '}
+              <span className="underline">cómo trabajamos</span> y qué resultados puedes esperar.
             </>
           }
         />

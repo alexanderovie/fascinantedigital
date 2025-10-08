@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 const DATA = [
   {
-    subTitle: 'Keyword insight local',
-    title: 'Keyword insight local',
+    subTitle: 'Palabras que venden',
+    title: 'Palabras que venden',
     description:
-      'Estudiamos tus keywords con volumen, competencia y tendencias reales de tu ciudad para enfocar esfuerzos.',
+      'Te mostramos qué buscan tus clientes y qué oportunidades estás dejando pasar.',
     icon: 'CircleHelp',
     image: '/images/homepage/adaptive-1.png',
   },
   {
-    subTitle: 'SEO técnico a nivel experto',
-    title: 'SEO técnico a nivel experto',
+    subTitle: 'Competencia bajo la lupa',
+    title: 'Competencia bajo la lupa',
     description:
-      'Auditoría avanzada con posibles mejoras inmediatas: velocidad, estructura, links internos y más.',
+      'Analizamos cómo se están moviendo tus competidores y diseñamos estrategias para que los superes.',
     icon: 'Volume2',
     image: '/images/homepage/adaptive-2.png',
   },
   {
-    subTitle: 'Seguimiento competitivo',
-    title: 'Seguimiento competitivo',
+    subTitle: 'Estrategias efectivas',
+    title: 'Estrategias efectivas',
     description:
-      'Te mostramos cómo tus rivales están posicionados, qué les funciona y cómo superarlos.',
+      'Campañas diseñadas con base en datos reales de búsqueda para conectar con tus clientes ideales.',
     icon: 'Lightbulb',
     image: '/images/homepage/adaptive-3.png',
   },

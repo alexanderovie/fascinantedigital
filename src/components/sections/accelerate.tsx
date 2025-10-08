@@ -14,44 +14,44 @@ import SectionHeader from '../section-header';
 
 const TIMELINE_ITEMS = [
   {
-    title: 'Páginas que funcionan',
+    title: 'Qué páginas atraen más',
     description:
-      'Identifica qué páginas atraen más tráfico y qué mejorar para multiplicar tus resultados.',
+      'Descubre qué partes de tu sitio generan más contactos y cómo puedes mejorarlas.',
     icon: LayoutList,
     image: {
       src: '/images/homepage/accelerate-1.png',
-      alt: 'Páginas que funcionan',
+      alt: 'Qué páginas atraen más',
     },
   },
   {
-    title: 'Evolución mes a mes',
+    title: 'Aprende del mejor',
     description:
-      'Ve tu crecimiento con gráficas históricas de visibilidad, enlaces y keywords.',
+      'Compara tus resultados con los líderes de tu sector y aplica sus mejores estrategias.',
     icon: LocateFixed,
     image: {
       src: '/images/homepage/accelerate-2.png',
-      alt: 'Evolución mes a mes',
+      alt: 'Aprende del mejor',
     },
     reverse: true,
   },
   {
-    title: 'Comparar con el top',
+    title: 'Seguimiento continuo',
     description:
-      'Analiza qué hacen tus competidores y adopta las tácticas que funcionan para ellos.',
+      'Monitorea tu progreso mes a mes con reportes claros que muestran tu evolución y próximos pasos.',
     icon: Users,
     image: {
       src: '/images/homepage/accelerate-3.png',
-      alt: 'Comparar con el top',
+      alt: 'Seguimiento continuo',
     },
   },
   {
-    title: 'Tecnología a tu favor',
+    title: 'Tecnología profesional',
     description:
-      'Sal adelante conociendo el CMS, plugins o framework que usan tus rivales.',
+      'Accede a herramientas de análisis que otras agencias cobran cientos de dólares al mes.',
     icon: Cpu,
     image: {
       src: '/images/homepage/accelerate-4.png',
-      alt: 'Tecnología a tu favor',
+      alt: 'Tecnología profesional',
     },
     reverse: true,
   },
@@ -63,10 +63,10 @@ const Accelerate = () => {
       <div className="border-b">
         <SectionHeader
           iconTitle="Planifica"
-          title="Diseña tu crecimiento con datos"
+          title="Diseña tu crecimiento con claridad"
           icon={Rocket}
           description={
-            'Toma control de tu estrategia digital paso a paso con análisis profesionales, métricas reales y acompañamiento experto'
+            'Toma decisiones seguras con reportes reales y asesoría personalizada. Nosotros medimos, analizamos y ajustamos contigo cada paso del camino.'
           }
         />
       </div>

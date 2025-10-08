@@ -10,23 +10,23 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const FEATURES_DATA = [
   {
-    title: 'Top 20 keywords gratis',
+    title: 'Tus palabras más buscadas',
     description:
-      'Ve tus 20 palabras más buscadas con su posición exacta y volumen local en tu ciudad.',
+      'Descubre las principales búsquedas que hacen tus clientes y en cuáles ya estás apareciendo sin saberlo.',
     icon: SquarePen,
     image: '/images/homepage/features-1.png',
   },
   {
-    title: 'Auditoría técnica express',
+    title: 'Revisión de visibilidad',
     description:
-      'Detecta hasta 5 errores SEO críticos que Google penaliza—enlaces rotos, falta de meta tags, estructura inválida.',
+      'Detecta los errores que pueden estar impidiendo que nuevos clientes te encuentren en internet.',
     icon: CalendarClock,
     image: '/images/homepage/features-2.png',
   },
   {
-    title: 'Comparativo con 3 competidores',
+    title: 'Comparativo local',
     description:
-      'Compara tu dominio con hasta 3 rivales: quién te gana y por qué en enlaces, keywords y visibilidad.',
+      'Compara tu negocio con los competidores de tu zona y descubre qué están haciendo diferente.',
     icon: ChartBar,
     image: '/images/homepage/features-3.png',
   },
