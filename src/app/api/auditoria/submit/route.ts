@@ -47,10 +47,12 @@ export async function POST(request: NextRequest) {
       // No bloqueamos si falla Lighthouse
     }
 
-    // 5. Enviar email de confirmación (solo si proporcionó email)
+    // 5. Construir URL de estado
+    const statusUrl = `${appUrl}/auditoria/${taskId}`;
+
+    // 6. Enviar email de confirmación (solo si proporcionó email)
     if (validatedData.email) {
       const emailService = getEmailService();
-      const statusUrl = `${appUrl}/auditoria/${taskId}`;
 
       await emailService.sendAuditStartedEmail({
         name: validatedData.email.split('@')[0], // Usamos la parte antes del @ como nombre
@@ -60,7 +62,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // 6. Retornar respuesta exitosa
+    // 7. Retornar respuesta exitosa
     return NextResponse.json(
       {
         success: true,
