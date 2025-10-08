@@ -12,7 +12,7 @@ const Features = () => {
           title="Herramientas gratuitas con datos reales"
           icon={PocketKnife}
           description={
-            'Obtén reportes instantáneos basados en APIs profesionales — sin compromiso.'
+            'Obtén reportes instantáneos basados en APIs profesionales—sin compromiso.'
           }
         />
       </div>

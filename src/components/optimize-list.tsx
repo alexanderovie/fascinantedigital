@@ -11,21 +11,21 @@ import { cn } from '@/lib/utils';
 
 const OPTIMIZE_DATA = [
   {
-    title: 'Mapas y Local Pack',
+    title: 'Mapas y local pack',
     description:
       'Medimos tu visibilidad en Google Maps y local pack frente a tus competidores directos.',
     icon: CircleHelp,
     image: '/images/homepage/optimize-1.png',
   },
   {
-    title: 'Reseñas Analizadas',
+    title: 'Reseñas analizadas',
     description:
       'Analizamos tus reseñas, puntuaciones y menciones para optimizar tu reputación digital.',
     icon: Volume2,
     image: '/images/homepage/optimize-2.png',
   },
   {
-    title: 'Posicionamiento Estratégico',
+    title: 'Posicionamiento estratégico',
     description:
       'Creamos campañas basadas en lo que la gente busca exactamente en tu zona, no lo que creemos que buscan.',
     icon: Lightbulb,

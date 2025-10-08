@@ -33,24 +33,24 @@ const Navbar = () => {
       href: '#features',
       dropdownItems: [
         {
-          title: 'Productividad Inteligente',
+          title: 'Herramientas gratuitas',
           href: '/#smart-productivity',
-          description: 'Aumenta tu productividad con insights de IA',
+          description: 'Análisis SEO y keywords sin costo',
         },
         {
-          title: 'Flujos Adaptativos',
+          title: 'Estrategia con datos',
           href: '/#adaptive-workflows',
-          description: 'Personaliza y automatiza tus procesos',
+          description: 'Decisiones basadas en métricas reales',
         },
         {
-          title: 'Programación Optimizada',
+          title: 'Presencia local',
           href: '/#optimized-scheduling',
-          description: 'Gestión inteligente de tiempo y agenda',
+          description: 'Destaca en Google Maps y búsquedas',
         },
         {
-          title: 'Acelera tu Planificación',
+          title: 'Crecimiento medible',
           href: '/#accelerate-planning',
-          description: 'Herramientas de planificación estratégica',
+          description: 'Análisis y reportes profesionales',
         },
       ],
     },

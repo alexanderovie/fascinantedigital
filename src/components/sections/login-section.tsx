@@ -23,7 +23,7 @@ const LoginSection = () => {
                 height={40}
                 className="mb-7"
               />
-              <p className="mb-2 text-2xl font-bold">Bienvenido de Vuelta</p>
+              <p className="mb-2 text-2xl font-bold">Bienvenido de vuelta</p>
               <p className="text-muted-foreground">
                 Por favor ingresa tus datos.
               </p>

@@ -23,7 +23,7 @@ const SignupSection = () => {
                 className="mb-7"
               />
               <p className="mb-2 text-2xl font-bold">
-                Inicia tu Prueba Gratuita
+                Inicia tu prueba gratuita
               </p>
               <p className="text-muted-foreground">
                 Regístrate en menos de 2 minutos.
@@ -44,7 +44,7 @@ const SignupSection = () => {
                   </p>
                 </div>
                 <Button type="submit" className="mt-2 w-full">
-                  Crear Cuenta
+                  Crear cuenta
                 </Button>
                 <Button variant="outline" className="w-full">
                   <FcGoogle className="mr-2 size-5" />

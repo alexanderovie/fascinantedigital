@@ -45,7 +45,7 @@ const pricingPlans: PricingPlan[] = [
       yearly: 199,
     },
     features: [
-      '100 keywords con SERP API (posición & volumen)',
+      '100 keywords con SERP API (posición y volumen)',
       'Auditoría técnica completa con OnPage API',
       'Reporte comparativo con 2 competidores',
       'Análisis de palabras más buscadas en tu zona',
@@ -62,8 +62,8 @@ const pricingPlans: PricingPlan[] = [
     features: [
       'Todo del plan Esencial, más:',
       'Monitoreo en vivo de posicionamientos',
-      'Seguimiento de backlinks (nuevos / perdidos)',
-      'Análisis de local pack & reseñas',
+      'Seguimiento de backlinks (nuevos y perdidos)',
+      'Análisis de local pack y reseñas',
       'Dashboard con métricas en tiempo real',
       'Soporte prioritario',
     ],

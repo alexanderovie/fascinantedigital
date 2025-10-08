@@ -9,7 +9,7 @@ const AboutHero = () => {
           <div className="flex-1 lg:border-l">
             <div className="lg:border-b lg:pr-8 lg:pb-5 lg:pl-2">
               <h1 className="mx-auto text-[2.5rem] leading-[1.2] tracking-[-1.6px] md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-                Impulsando Productividad con Propósito
+                Impulsando productividad con propósito
               </h1>
               <p className="text-muted-foreground mt-6 tracking-[-0.32px]">
                 Nuestra misión es desbloquear el potencial creando herramientas

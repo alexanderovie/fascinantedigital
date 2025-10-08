@@ -106,7 +106,7 @@ const Testimonials = ({ withBorders = true }: { withBorders?: boolean }) => {
           iconTitle="nos aman"
           title="Lo que dicen los expertos de la industria"
           icon={Handshake}
-          description="Confiado por Profesionales de Empresas Tecnológicas Líderes"
+          description="Confiado por profesionales de empresas tecnológicas líderes"
           className={withBorders ? '' : 'border-none'}
         />
       </div>

@@ -50,8 +50,8 @@ const Team = () => {
   return (
     <section className="">
       <SectionHeader
-        iconTitle="¡En Equipo!"
-        title="Las Mentes Detrás de la Misión"
+        iconTitle="¡En equipo!"
+        title="Las mentes detrás de la misión"
         icon={Users}
         description="Un equipo dedicado y apasionado por dar forma al futuro de la productividad."
         className={'border-none'}

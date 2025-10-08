@@ -10,21 +10,21 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const FEATURES_DATA = [
   {
-    title: 'Top 20 Keywords Gratis',
+    title: 'Top 20 keywords gratis',
     description:
       'Ve tus 20 palabras más buscadas con su posición exacta y volumen local en tu ciudad.',
     icon: SquarePen,
     image: '/images/homepage/features-1.png',
   },
   {
-    title: 'Auditoría Técnica Express',
+    title: 'Auditoría técnica express',
     description:
-      'Detecta hasta 5 errores SEO críticos que Google penaliza — enlaces rotos, falta de meta tags, estructura inválida.',
+      'Detecta hasta 5 errores SEO críticos que Google penaliza—enlaces rotos, falta de meta tags, estructura inválida.',
     icon: CalendarClock,
     image: '/images/homepage/features-2.png',
   },
   {
-    title: 'Comparativo con 3 Competidores',
+    title: 'Comparativo con 3 competidores',
     description:
       'Compara tu dominio con hasta 3 rivales: quién te gana y por qué en enlaces, keywords y visibilidad.',
     icon: ChartBar,

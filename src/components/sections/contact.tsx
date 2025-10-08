@@ -39,7 +39,7 @@ const contactMethods = [
         href="#"
         className="text-foreground inline-flex items-center gap-1 text-sm font-medium hover:underline"
       >
-        Cómo Llegar
+        Cómo llegar
         <ChevronRight className="size-4" />
       </Link>
     ),
@@ -79,7 +79,7 @@ const Contact = () => {
       <SectionHeader
         icon={Mail}
         iconTitle="Contáctanos"
-        title="Ponte en Contacto"
+        title="Ponte en contacto"
         description="Estamos aquí para ayudar—contáctanos con cualquier pregunta o comentario."
         className="border-none !pb-0"
       />

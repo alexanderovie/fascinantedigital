@@ -2,24 +2,24 @@ import Image from 'next/image';
 
 const DATA = [
   {
-    subTitle: 'Keyword Insight Local',
-    title: 'Keyword Insight Local',
+    subTitle: 'Keyword insight local',
+    title: 'Keyword insight local',
     description:
       'Estudiamos tus keywords con volumen, competencia y tendencias reales de tu ciudad para enfocar esfuerzos.',
     icon: 'CircleHelp',
     image: '/images/homepage/adaptive-1.png',
   },
   {
-    subTitle: 'SEO Técnico a Nivel Experto',
-    title: 'SEO Técnico a Nivel Experto',
+    subTitle: 'SEO técnico a nivel experto',
+    title: 'SEO técnico a nivel experto',
     description:
       'Auditoría avanzada con posibles mejoras inmediatas: velocidad, estructura, links internos y más.',
     icon: 'Volume2',
     image: '/images/homepage/adaptive-2.png',
   },
   {
-    subTitle: 'Seguimiento Competitivo',
-    title: 'Seguimiento Competitivo',
+    subTitle: 'Seguimiento competitivo',
+    title: 'Seguimiento competitivo',
     description:
       'Te mostramos cómo tus rivales están posicionados, qué les funciona y cómo superarlos.',
     icon: 'Lightbulb',

@@ -4,19 +4,19 @@ import SectionHeader from '../section-header';
 
 const values = [
   {
-    title: 'Diseño Centrado en el Usuario',
+    title: 'Diseño centrado en el usuario',
     description:
       'Priorizamos la experiencia del usuario, asegurando que cada función agregue valor real y sea intuitiva de usar.',
     icon: UserCog,
   },
   {
-    title: 'Innovación Continua',
+    title: 'Innovación continua',
     description:
       'Estamos comprometidos a traspasar límites y evolucionar para satisfacer las necesidades de los equipos modernos.',
     icon: Lightbulb,
   },
   {
-    title: 'Integridad y Transparencia',
+    title: 'Integridad y transparencia',
     description:
       'Construimos con honestidad y claridad, fomentando confianza con nuestros usuarios y socios.',
     icon: Shield,
@@ -28,7 +28,7 @@ const Values = () => {
     <section>
       <SectionHeader
         iconTitle="Vivimos por"
-        title="Nuestros Valores Fundamentales"
+        title="Nuestros valores fundamentales"
         icon={Heart}
         description="Creemos en principios que guían nuestro crecimiento e inspiran a nuestra comunidad."
         className="border-none"

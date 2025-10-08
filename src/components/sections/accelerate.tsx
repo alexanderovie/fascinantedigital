@@ -14,44 +14,44 @@ import SectionHeader from '../section-header';
 
 const TIMELINE_ITEMS = [
   {
-    title: 'Páginas que Funcionan',
+    title: 'Páginas que funcionan',
     description:
       'Identifica qué páginas atraen más tráfico y qué mejorar para multiplicar tus resultados.',
     icon: LayoutList,
     image: {
       src: '/images/homepage/accelerate-1.png',
-      alt: 'Páginas que Funcionan',
+      alt: 'Páginas que funcionan',
     },
   },
   {
-    title: 'Evolución Mes a Mes',
+    title: 'Evolución mes a mes',
     description:
       'Ve tu crecimiento con gráficas históricas de visibilidad, enlaces y keywords.',
     icon: LocateFixed,
     image: {
       src: '/images/homepage/accelerate-2.png',
-      alt: 'Evolución Mes a Mes',
+      alt: 'Evolución mes a mes',
     },
     reverse: true,
   },
   {
-    title: 'Comparar con el Top',
+    title: 'Comparar con el top',
     description:
       'Analiza qué hacen tus competidores y adopta las tácticas que funcionan para ellos.',
     icon: Users,
     image: {
       src: '/images/homepage/accelerate-3.png',
-      alt: 'Comparar con el Top',
+      alt: 'Comparar con el top',
     },
   },
   {
-    title: 'Tecnología a tu Favor',
+    title: 'Tecnología a tu favor',
     description:
       'Sal adelante conociendo el CMS, plugins o framework que usan tus rivales.',
     icon: Cpu,
     image: {
       src: '/images/homepage/accelerate-4.png',
-      alt: 'Tecnología a tu Favor',
+      alt: 'Tecnología a tu favor',
     },
     reverse: true,
   },
