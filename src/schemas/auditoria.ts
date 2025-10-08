@@ -1,22 +1,10 @@
 import { z } from 'zod';
 
 /**
- * Schema de validación para el formulario de auditoría
+ * Schema de validación para el formulario de auditoría (simplificado)
  */
 export const auditoriaFormSchema = z.object({
-  // Información del negocio
-  name: z
-    .string()
-    .min(2, 'El nombre debe tener al menos 2 caracteres')
-    .max(100, 'El nombre es demasiado largo'),
-
-  email: z
-    .string()
-    .email('Por favor ingresa un email válido')
-    .toLowerCase()
-    .trim(),
-
-  // URL del sitio web
+  // URL del sitio web (requerido)
   website: z
     .string()
     .url('Por favor ingresa una URL válida')
@@ -34,29 +22,14 @@ export const auditoriaFormSchema = z.object({
     }, 'La URL no parece ser válida')
     .transform((url) => url.toLowerCase().trim()),
 
-  // Tipo de negocio
-  businessType: z.enum(['local', 'ecommerce', 'corporate', 'blog'], {
-    errorMap: () => ({ message: 'Por favor selecciona un tipo de negocio' }),
-  }),
-
-  // Ubicación (opcional para negocios locales)
-  location: z
+  // Email (opcional - para recibir resultados)
+  email: z
     .string()
-    .max(100, 'La ubicación es demasiado larga')
+    .email('Por favor ingresa un email válido')
+    .toLowerCase()
+    .trim()
     .optional()
     .or(z.literal('')),
-
-  // Mensaje adicional (opcional)
-  message: z
-    .string()
-    .max(500, 'El mensaje es demasiado largo')
-    .optional()
-    .or(z.literal('')),
-
-  // Aceptación de términos
-  acceptTerms: z
-    .boolean()
-    .refine((val) => val === true, 'Debes aceptar los términos de servicio'),
 });
 
 export type AuditoriaFormData = z.infer<typeof auditoriaFormSchema>;

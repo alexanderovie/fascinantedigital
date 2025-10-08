@@ -21,11 +21,12 @@ export async function POST(request: NextRequest) {
 
     // 3. Crear tarea OnPage en DataForSEO
     const onPageService = getOnPageService();
+    const emailTag = validatedData.email || 'no-email';
     const taskId = await onPageService.createTask(validatedData.website, {
       maxPages: 1, // Solo página raíz por ahora
       enableJavaScript: true,
       pingbackUrl,
-      tag: `audit_${Date.now()}_${validatedData.email}`,
+      tag: `audit_${Date.now()}_${emailTag}`,
     });
 
     // 4. Crear tarea Lighthouse (opcional, para métricas de performance)
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest) {
           forMobile: true,
           languageCode: 'es',
           pingbackUrl,
-          tag: `lighthouse_${Date.now()}_${validatedData.email}`,
+          tag: `lighthouse_${Date.now()}_${emailTag}`,
         },
       );
     } catch (error) {
@@ -46,16 +47,18 @@ export async function POST(request: NextRequest) {
       // No bloqueamos si falla Lighthouse
     }
 
-    // 5. Enviar email de confirmación
-    const emailService = getEmailService();
-    const statusUrl = `${appUrl}/auditoria/${taskId}`;
+    // 5. Enviar email de confirmación (solo si proporcionó email)
+    if (validatedData.email) {
+      const emailService = getEmailService();
+      const statusUrl = `${appUrl}/auditoria/${taskId}`;
 
-    await emailService.sendAuditStartedEmail({
-      name: validatedData.email, // Usamos email como fallback si no hay nombre
-      website: validatedData.website,
-      taskId,
-      statusUrl,
-    });
+      await emailService.sendAuditStartedEmail({
+        name: validatedData.email.split('@')[0], // Usamos la parte antes del @ como nombre
+        website: validatedData.website,
+        taskId,
+        statusUrl,
+      });
+    }
 
     // 6. Retornar respuesta exitosa
     return NextResponse.json(
