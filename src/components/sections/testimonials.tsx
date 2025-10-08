@@ -74,10 +74,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Como diseñador, aprecio lo intuitiva y visualmente atractiva que es esta app. Simplifica la gestión de tareas sin sacrificar funciones poderosas.',
+      'Pensé que tener solo mi Instagram era suficiente, pero después de trabajar con ellos mi negocio aparece en Google y ya no dependo solo de las redes.',
     author: {
-      name: 'Carlos Diaz',
-      role: 'Líder de Diseño, Figma',
+      name: 'Andrea Torres',
+      role: 'Fotógrafa profesional, Fort Lauderdale',
       image: '/images/testimonials/5.png',
     },
   },
@@ -89,10 +89,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Los recordatorios inteligentes y la programación automatizada mantienen a nuestro equipo enfocado y en el camino. También hemos encontrado las funciones colaborativas muy útiles.',
+      'Lo mejor es la claridad: sé exactamente qué hacer para seguir creciendo. Ya no adivino, ahora trabajo con estrategia.',
     author: {
-      name: 'Matthew Kim',
-      role: 'Estratega de Contenido, Loom',
+      name: 'Carlos Méndez',
+      role: 'Propietario de restaurante, Palm Beach',
       image: '/images/testimonials/6.png',
     },
   },
