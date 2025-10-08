@@ -22,12 +22,20 @@ export default function Hero() {
             Atrae clientes desde Google y Meta con estrategias simples y
             efectivas.
           </p>
-          <Button asChild className="mt-6 gap-1 md:mt-8 lg:mt-10">
-            <Link href="/contact">
-              Quiero más clientes ahora
-              <ChevronRight className="size-4" />
-            </Link>
-          </Button>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-8 lg:mt-10">
+            <Button asChild className="gap-1">
+              <Link href="/contact">
+                Quiero más clientes ahora
+                <ChevronRight className="size-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="gap-1">
+              <Link href="/contact">
+                Obtener reporte gratis
+                <ChevronRight className="size-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
         <BorderedSection className="border-r-0 border-l 2xl:flex-1">
           <DiagonalPattern />
