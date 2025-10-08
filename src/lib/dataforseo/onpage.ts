@@ -1,11 +1,11 @@
 import { getDataForSEOClient } from './client';
 
 import type {
-  OnPageTaskPostRequest,
-  OnPageTaskPostResult,
-  OnPageSummaryResult,
   OnPagePageResult,
   OnPagePagesRequest,
+  OnPageSummaryResult,
+  OnPageTaskPostRequest,
+  OnPageTaskPostResult,
 } from '@/types/dataforseo';
 
 /**
@@ -50,11 +50,18 @@ export class OnPageService {
       taskData,
     );
 
-    if (!response.tasks?.[0]?.result?.[0]?.id) {
-      throw new Error('Failed to create OnPage task: No task ID returned');
+    // El task ID está en tasks[0].id, NO en tasks[0].result[0].id
+    if (!response.tasks?.[0]?.id) {
+      console.error('Task creation failed. Response:', response);
+      throw new Error(
+        `Failed to create OnPage task: ${response.tasks?.[0]?.status_message || 'No task ID returned'}`,
+      );
     }
 
-    return response.tasks[0].result[0].id;
+    const taskId = response.tasks[0].id;
+    console.log('✅ OnPage task created successfully. Task ID:', taskId);
+
+    return taskId;
   }
 
   /**

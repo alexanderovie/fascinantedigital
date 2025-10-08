@@ -45,11 +45,15 @@ export class LighthouseService {
       taskData,
     );
 
-    if (!response.tasks?.[0]?.result?.[0]?.id) {
+    // El task ID está en tasks[0].id, NO en tasks[0].result[0].id
+    if (!response.tasks?.[0]?.id) {
       throw new Error('Failed to create Lighthouse task: No task ID returned');
     }
 
-    return response.tasks[0].result[0].id;
+    const taskId = response.tasks[0].id;
+    console.log('✅ Lighthouse task created successfully. Task ID:', taskId);
+
+    return taskId;
   }
 
   /**
