@@ -4,12 +4,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import {
-  LucideIcon,
-  Search,
-  Target,
-  TrendingUp,
-} from 'lucide-react';
+import { LucideIcon, Search, Target, TrendingUp } from 'lucide-react';
 
 import SectionHeader from '../section-header';
 
