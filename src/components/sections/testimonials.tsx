@@ -14,10 +14,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Nuestro equipo en Zerostatic depende mucho de la automatización, y esta app lo lleva a otro nivel. Es como tener un asistente virtual integrado en mi flujo de trabajo.',
+      'En menos de dos meses empecé a recibir clientes nuevos gracias a los cambios que me hicieron. Ahora entiendo por qué no me encontraban antes.',
     author: {
-      name: 'Abdulsalam Abdulsalam',
-      role: 'Diseñador de Producto, Zerostatic',
+      name: 'María López',
+      role: 'Propietaria de salón de belleza, Miami',
       image: '/images/testimonials/1.png',
     },
   },
@@ -29,10 +29,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Me encanta especialmente las integraciones de calendario perfectas y las funciones avanzadas de gestión de tareas que mantienen a todos alineados y organizados.',
+      'Antes gastaba en publicidad sin saber si funcionaba. Con Fascinante Digital veo los resultados y sé qué campañas traerán más ventas.',
     author: {
-      name: 'Emma Lee',
-      role: 'Gerente de Producto, Notion',
+      name: 'José Ramírez',
+      role: 'Dueño de tienda de repuestos, West Palm Beach',
       image: '/images/testimonials/2.png',
     },
   },
@@ -44,10 +44,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Necesitábamos una app de productividad que creciera con las necesidades de nuestro equipo, esta ha sido el ajuste perfecto. Las herramientas de automatización nos han ahorrado horas.',
+      'Nos ayudaron a mejorar todo: perfil de Google, Instagram y sitio web. Lo mejor es que ahora los clientes nos encuentran solos.',
     author: {
-      name: 'Ryan Chen',
-      role: 'Líder de Operaciones, Slack',
+      name: 'Carolina Gómez',
+      role: 'Administradora de clínica dental, Orlando',
       image: '/images/testimonials/3.png',
     },
   },
@@ -59,10 +59,10 @@ const testimonials: TestimonialProps[] = [
       height: 36,
     },
     quote:
-      'Esta plataforma ha sido invaluable para gestionar proyectos entre equipos distribuidos. Su integración con nuestras herramientas existentes hace la configuración fácil.',
+      'Pasé de recibir 2 mensajes por semana a más de 15 clientes interesados cada día. No son promesas, son resultados.',
     author: {
-      name: 'Ryan Patel',
-      role: 'Gerente de Ingeniería, GitHub',
+      name: 'Luis Hernández',
+      role: 'Servicio de limpieza, Tampa',
       image: '/images/testimonials/4.png',
     },
   },
