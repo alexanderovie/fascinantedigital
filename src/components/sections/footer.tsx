@@ -35,6 +35,7 @@ const Footer = () => {
               alt="Fascinante Digital Logo"
               width={180}
               height={40}
+              className="h-auto w-[120px] lg:w-[140px]"
             />
           </Link>
         </div>
