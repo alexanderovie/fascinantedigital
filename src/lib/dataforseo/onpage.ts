@@ -255,8 +255,8 @@ export class OnPageService {
     const requestData = [
       {
         id: taskId,
-        url: url,
         keyword_length: keywordLength,
+        url: url,
       },
     ];
 
