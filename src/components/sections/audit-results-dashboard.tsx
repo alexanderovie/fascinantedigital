@@ -265,7 +265,7 @@ const AuditResultsDashboard = ({
     <div className="space-y-8">
       {/* Header */}
       <div className="container flex flex-col gap-6 border-x py-4 max-lg:border-x lg:py-8 !max-w-[480px] !border-none lg:items-center lg:text-center">
-        <TitleTag title="AUDITORÍA" icon={BarChart3} />
+        <TitleTag title="Auditoría" icon={BarChart3} />
         <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl">
           Resultados de tu Auditoría SEO
         </h2>
