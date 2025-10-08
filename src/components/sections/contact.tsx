@@ -109,7 +109,7 @@ const Contact = () => {
                 className="text-sm font-normal peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 Acepto los{' '}
-                <Link href="/terms" className="underline">
+                <Link href="/terms-of-service" className="underline">
                   Términos
                 </Link>
               </Label>
