@@ -90,28 +90,28 @@ function generateMockPages(domain: string, checkType: string): string[] {
   // En producción, esto vendría de la API real de DataForSEO
   switch (checkType) {
     case 'has_render_blocking_resources':
-      return commonPages.slice(0, 6).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 6).map((page) => `${baseUrl}${page}`);
     case 'no_h1_tag':
-      return commonPages.slice(0, 4).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 4).map((page) => `${baseUrl}${page}`);
     case 'no_image_title':
-      return commonPages.slice(0, 6).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 6).map((page) => `${baseUrl}${page}`);
     case 'low_content_rate':
-      return commonPages.slice(0, 6).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 6).map((page) => `${baseUrl}${page}`);
     case 'low_readability_rate':
-      return commonPages.slice(0, 4).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 4).map((page) => `${baseUrl}${page}`);
     case 'title_too_short':
-      return commonPages.slice(0, 2).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 2).map((page) => `${baseUrl}${page}`);
     case 'irrelevant_meta_keywords':
-      return commonPages.slice(0, 2).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 2).map((page) => `${baseUrl}${page}`);
     case 'low_character_count':
       return [`${baseUrl}/contact`];
     case 'is_https':
-      return commonPages.slice(0, 7).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 7).map((page) => `${baseUrl}${page}`);
     case 'has_html_doctype':
-      return commonPages.slice(0, 7).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 7).map((page) => `${baseUrl}${page}`);
     case 'canonical':
-      return commonPages.slice(0, 6).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 6).map((page) => `${baseUrl}${page}`);
     default:
-      return commonPages.slice(0, 3).map(page => `${baseUrl}${page}`);
+      return commonPages.slice(0, 3).map((page) => `${baseUrl}${page}`);
   }
 }

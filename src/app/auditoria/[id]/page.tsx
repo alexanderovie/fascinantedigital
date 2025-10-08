@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { getOnPageService } from '@/lib/dataforseo/onpage';
+import type { Metadata } from 'next';
+
 import AuditResultsDashboard from '@/components/sections/audit-results-dashboard';
+import { getOnPageService } from '@/lib/dataforseo/onpage';
 
 export const metadata: Metadata = {
   title: 'Resultados de Auditoría SEO',
@@ -31,7 +32,11 @@ const AuditResultsPage = async ({ params }: PageProps) => {
 
     return (
       <div className="container py-14 md:py-20 lg:py-24">
-        <AuditResultsDashboard summary={summary} taskId={id} isComplete={isComplete} />
+        <AuditResultsDashboard
+          summary={summary}
+          taskId={id}
+          isComplete={isComplete}
+        />
       </div>
     );
   } catch (error) {
@@ -41,4 +46,3 @@ const AuditResultsPage = async ({ params }: PageProps) => {
 };
 
 export default AuditResultsPage;
-

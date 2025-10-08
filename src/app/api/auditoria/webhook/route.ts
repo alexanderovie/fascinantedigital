@@ -52,8 +52,12 @@ export async function POST(request: NextRequest) {
     const summary = await onPageService.getSummary(validatedPayload.id);
 
     // 6. Calcular métricas simplificadas
-    const totalIssues = summary.page_metrics?.checks ? 
-      Object.values(summary.page_metrics.checks).reduce((sum, count) => sum + count, 0) : 0;
+    const _totalIssues = summary.page_metrics?.checks
+      ? Object.values(summary.page_metrics.checks).reduce(
+          (sum, count) => sum + count,
+          0,
+        )
+      : 0;
     const criticalIssues = summary.page_metrics?.checks?.['broken_links'] || 0;
     const warnings = summary.page_metrics?.checks?.['duplicate_title'] || 0;
     const score = summary.page_metrics?.onpage_score || 0;

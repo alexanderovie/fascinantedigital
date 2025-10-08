@@ -44,12 +44,14 @@ export async function GET(
       },
       summary: isComplete
         ? {
-          score: summary.page_metrics?.onpage_score || 0,
-          totalPages: summary.page_metrics ?
-            (summary.page_metrics.links_internal + summary.page_metrics.links_external) : 0,
-          checks: summary.page_metrics?.checks || {},
-          domain: summary.domain_info?.name || '',
-        }
+            score: summary.page_metrics?.onpage_score || 0,
+            totalPages: summary.page_metrics
+              ? summary.page_metrics.links_internal +
+                summary.page_metrics.links_external
+              : 0,
+            checks: summary.page_metrics?.checks || {},
+            domain: summary.domain_info?.name || '',
+          }
         : null,
     });
   } catch (error) {
