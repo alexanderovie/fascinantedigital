@@ -63,7 +63,8 @@ const Faq = ({ withBorders = true }: { withBorders?: boolean }) => {
           description={
             <>
               Resolvemos las dudas más comunes sobre{' '}
-              <span className="underline">cómo trabajamos</span> y qué resultados puedes esperar.
+              <span className="underline">cómo trabajamos</span> y qué
+              resultados puedes esperar.
             </>
           }
         />
