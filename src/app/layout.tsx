@@ -2,10 +2,10 @@ import localFont from 'next/font/local';
 
 import type { Metadata } from 'next';
 
-import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/sections/footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import './globals.css';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',

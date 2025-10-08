@@ -17,11 +17,11 @@ const LoginSection = () => {
           <Card className="mx-auto w-full max-w-sm">
             <CardHeader className="flex flex-col items-center space-y-0">
               <Image
-                src="/images/logo.svg"
-                alt="logo"
-                width={94}
-                height={18}
-                className="mb-7 dark:invert"
+                src="/logo-fascinante.svg"
+                alt="Fascinante Digital Logo"
+                width={140}
+                height={40}
+                className="mb-7"
               />
               <p className="mb-2 text-2xl font-bold">Bienvenido de Vuelta</p>
               <p className="text-muted-foreground">
