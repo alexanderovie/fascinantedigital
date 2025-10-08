@@ -379,24 +379,6 @@ export class OnPageService {
     );
     return response.tasks?.[0]?.result || [];
   }
-
-  /**
-   * Obtener análisis de contenido duplicado
-   */
-  async getDuplicateContent(taskId: string, url: string): Promise<any[]> {
-    const requestData = [
-      {
-        id: taskId,
-        url: url,
-      },
-    ];
-
-    const response = await this.client.request(
-      '/v3/on_page/duplicate_content',
-      requestData,
-    );
-    return response.tasks?.[0]?.result || [];
-  }
 }
 
 /**
