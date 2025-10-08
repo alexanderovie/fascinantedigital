@@ -15,6 +15,10 @@ import {
   TrendingUp,
 } from 'lucide-react';
 
+import ContentAnalysisChart from '@/components/charts/content-analysis-chart';
+import KeywordDensityChart from '@/components/charts/keyword-density-chart';
+import LinksAnalysisChart from '@/components/charts/links-analysis-chart';
+import ResourceBreakdownChart from '@/components/charts/resource-breakdown-chart';
 import TitleTag from '@/components/title-tag';
 import {
   Accordion,
@@ -25,7 +29,15 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import {
+  Tabs as UITabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs';
 import type { OnPageSummaryResult } from '@/types/dataforseo';
+
+// Importar nuevos componentes de gráficos
 
 interface AuditResultsDashboardProps {
   summary: OnPageSummaryResult;
@@ -204,6 +216,13 @@ const AuditResultsDashboard = ({
   const [expandedIssues, setExpandedIssues] = useState<Set<string>>(new Set());
   const [pagesData, setPagesData] = useState<Record<string, string[]>>({});
 
+  // Estados para nuevos datos
+  const [contentData, setContentData] = useState<any>(null);
+  const [keywordsData, setKeywordsData] = useState<any[]>([]);
+  const [resourcesData, setResourcesData] = useState<any>(null);
+  const [linksData, setLinksData] = useState<any>(null);
+  const [loadingData, setLoadingData] = useState(false);
+
   // Función para obtener las páginas específicas de un problema
   const fetchPagesForIssue = async (checkType: string) => {
     if (pagesData[checkType]) return; // Ya tenemos los datos
@@ -221,6 +240,54 @@ const AuditResultsDashboard = ({
       }
     } catch (error) {
       console.error('Error fetching pages:', error);
+    }
+  };
+
+  // Función para cargar datos adicionales
+  const loadAdditionalData = async () => {
+    if (!isComplete || loadingData) return;
+
+    setLoadingData(true);
+    const targetUrl = summary.domain_info?.name || '';
+
+    try {
+      // Cargar todos los datos en paralelo
+      const [contentRes, keywordsRes, resourcesRes, linksRes] =
+        await Promise.allSettled([
+          fetch(
+            `/api/auditoria/content/${taskId}?url=${encodeURIComponent(targetUrl)}`,
+          ),
+          fetch(
+            `/api/auditoria/keywords/${taskId}?url=${encodeURIComponent(targetUrl)}`,
+          ),
+          fetch(`/api/auditoria/resources/${taskId}`),
+          fetch(`/api/auditoria/links/${taskId}`),
+        ]);
+
+      // Procesar respuestas
+      if (contentRes.status === 'fulfilled' && contentRes.value.ok) {
+        const contentData = await contentRes.value.json();
+        setContentData(contentData.content);
+      }
+
+      if (keywordsRes.status === 'fulfilled' && keywordsRes.value.ok) {
+        const keywordsData = await keywordsRes.value.json();
+        setKeywordsData(keywordsData.keywords);
+      }
+
+      if (resourcesRes.status === 'fulfilled' && resourcesRes.value.ok) {
+        const resourcesData = await resourcesRes.value.json();
+        setResourcesData(resourcesData);
+      }
+
+      if (linksRes.status === 'fulfilled' && linksRes.value.ok) {
+        const linksData = await linksRes.value.json();
+        setLinksData(linksData);
+      }
+    } catch (error) {
+      console.error('Error loading additional data:', error);
+    } finally {
+      setLoadingData(false);
     }
   };
 
@@ -247,6 +314,9 @@ const AuditResultsDashboard = ({
       }, 5000);
 
       return () => clearInterval(interval);
+    } else {
+      // Si está completa, cargar datos adicionales
+      loadAdditionalData();
     }
   }, [isComplete]);
 
@@ -658,6 +728,77 @@ const AuditResultsDashboard = ({
                 </div>
               )}
             </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Análisis Avanzado con Pestañas */}
+      {isComplete && (
+        <Card>
+          <CardHeader>
+            <h2 className="text-xl font-bold">Análisis Avanzado</h2>
+            <p className="text-muted-foreground text-sm">
+              Visualizaciones detalladas de tu sitio web
+            </p>
+          </CardHeader>
+          <CardContent>
+            {loadingData ? (
+              <div className="flex items-center justify-center py-8">
+                <Loader2 className="size-6 animate-spin text-blue-600" />
+                <span className="text-muted-foreground ml-2">
+                  Cargando análisis avanzado...
+                </span>
+              </div>
+            ) : (
+              <UITabs defaultValue="content" className="w-full">
+                <TabsList className="grid w-full grid-cols-4">
+                  <TabsTrigger value="content">Contenido</TabsTrigger>
+                  <TabsTrigger value="keywords">Palabras Clave</TabsTrigger>
+                  <TabsTrigger value="resources">Recursos</TabsTrigger>
+                  <TabsTrigger value="links">Enlaces</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="content" className="mt-6">
+                  {contentData ? (
+                    <ContentAnalysisChart content={contentData} />
+                  ) : (
+                    <div className="text-muted-foreground py-8 text-center">
+                      No se pudo cargar el análisis de contenido
+                    </div>
+                  )}
+                </TabsContent>
+
+                <TabsContent value="keywords" className="mt-6">
+                  {keywordsData.length > 0 ? (
+                    <KeywordDensityChart keywords={keywordsData} />
+                  ) : (
+                    <div className="text-muted-foreground py-8 text-center">
+                      No se encontraron palabras clave
+                    </div>
+                  )}
+                </TabsContent>
+
+                <TabsContent value="resources" className="mt-6">
+                  {resourcesData ? (
+                    <ResourceBreakdownChart stats={resourcesData.stats} />
+                  ) : (
+                    <div className="text-muted-foreground py-8 text-center">
+                      No se pudo cargar el análisis de recursos
+                    </div>
+                  )}
+                </TabsContent>
+
+                <TabsContent value="links" className="mt-6">
+                  {linksData ? (
+                    <LinksAnalysisChart stats={linksData.stats} />
+                  ) : (
+                    <div className="text-muted-foreground py-8 text-center">
+                      No se pudo cargar el análisis de enlaces
+                    </div>
+                  )}
+                </TabsContent>
+              </UITabs>
+            )}
           </CardContent>
         </Card>
       )}
