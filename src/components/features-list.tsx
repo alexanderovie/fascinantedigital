@@ -80,6 +80,7 @@ const FeaturesList = () => {
                     alt={item.title}
                     width={400}
                     height={510}
+                    sizes="(max-width: 768px) 300px, 400px"
                     className="m-3 rounded-md object-contain shadow-md lg:rounded-xl lg:shadow-lg dark:invert"
                   />
                   <DiagonalPattern className="w-6 lg:w-10" />
