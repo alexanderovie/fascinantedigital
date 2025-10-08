@@ -63,15 +63,8 @@ export interface OnPageSummaryResult {
     pages_in_queue: number;
     pages_crawled: number;
   };
-  total_items_count: number;
-  items_count: number;
-  checks: {
-    [key: string]: number;
-  };
-  pages: {
-    [key: string]: number;
-  };
-  on_page_score: number;
+  crawl_gateway_address: string;
+  crawl_stop_reason: string;
   domain_info: {
     name: string;
     cms: string | null;
@@ -79,6 +72,7 @@ export interface OnPageSummaryResult {
     server: string;
     crawl_start: string;
     crawl_end: string;
+    extended_crawl_status: string;
     ssl_info: {
       valid_certificate: boolean;
       certificate_issuer: string;
@@ -86,6 +80,31 @@ export interface OnPageSummaryResult {
       certificate_version: number;
       certificate_hash: string;
       certificate_expiration_date: string;
+    };
+    checks: {
+      [key: string]: boolean;
+    };
+    total_pages: number;
+    page_not_found_status_code: number;
+    canonicalization_status_code: number;
+    directory_browsing_status_code: number;
+    www_redirect_status_code: number | null;
+    main_domain: string;
+  };
+  page_metrics: {
+    links_external: number;
+    links_internal: number;
+    duplicate_title: number;
+    duplicate_description: number;
+    duplicate_content: number;
+    broken_links: number;
+    broken_resources: number;
+    links_relation_conflict: number;
+    redirect_loop: number;
+    onpage_score: number;
+    non_indexable: number;
+    checks: {
+      [key: string]: number;
     };
   };
 }
