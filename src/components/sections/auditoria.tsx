@@ -35,6 +35,9 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
     watch,
   } = useForm<AuditoriaFormData>({
     resolver: zodResolver(auditoriaFormSchema),
+    defaultValues: {
+      acceptTerms: false, // Valor inicial para evitar el warning de controlled/uncontrolled
+    },
   });
 
   const acceptTerms = watch('acceptTerms');
