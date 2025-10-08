@@ -81,9 +81,9 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
           icon={Search}
           description={
             <>
-              Descubre{' '}
+              Te mostramos{' '}
               <span className="underline">cómo está tu presencia digital</span>{' '}
-              y qué oportunidades tienes para atraer más clientes.
+              y qué puedes hacer para atraer más clientes.
             </>
           }
         />
@@ -127,7 +127,7 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
                 disabled={isSubmitting}
               />
               <p className="text-muted-foreground text-xs">
-                Te enviaremos los resultados por email si lo proporcionas
+                Te enviamos los resultados por email (opcional)
               </p>
               {errors.email && (
                 <p className="text-sm text-red-500">{errors.email.message}</p>

@@ -413,8 +413,8 @@ const AuditResultsDashboard = ({
             <CardHeader>
               <h2 className="text-xl font-bold">Resumen del Análisis</h2>
               <p className="text-muted-foreground text-sm">
-                Aquí tienes un resumen de lo que está bien y lo que se puede
-                mejorar
+                Aquí tienes un resumen de lo que está bien y lo que podemos
+                mejorar contigo
               </p>
             </CardHeader>
             <CardContent>
@@ -486,7 +486,7 @@ const AuditResultsDashboard = ({
               </h2>
               <p className="text-muted-foreground text-sm">
                 Aquí tienes todo lo que encontramos, explicado de forma simple.
-                Haz clic en cada elemento para ver las páginas específicas.
+                Haz clic en cada punto para ver los detalles específicos.
               </p>
             </CardHeader>
             <CardContent>
@@ -668,12 +668,11 @@ const AuditResultsDashboard = ({
           <CardContent className="pt-6">
             <div className="text-center">
               <h3 className="text-xl font-bold text-blue-900">
-                ¿Quieres que arreglemos todo esto por ti?
+                ¿Quieres que te ayudemos a mejorar tu sitio?
               </h3>
               <p className="mt-2 mb-4 text-blue-700">
-                Nuestro equipo puede mejorar tu sitio web y hacer que aparezca
-                mejor en Google. Te explicamos todo paso a paso y trabajamos
-                contigo.
+                Nos encargamos de todo para que aparezcas mejor en Google y
+                atraigas más clientes. Te acompañamos paso a paso.
               </p>
               <div className="flex flex-col justify-center gap-3 sm:flex-row">
                 <Button asChild className="gap-1">
