@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import {
@@ -7,11 +8,13 @@ import {
   AlertTriangle,
   BarChart3,
   CheckCircle2,
+  ChevronRight,
   Clock,
   Info,
   TrendingUp,
 } from 'lucide-react';
 
+import TitleTag from '@/components/title-tag';
 import {
   Accordion,
   AccordionContent,
@@ -19,8 +22,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import TitleTag from '@/components/title-tag';
 import type { OnPageSummaryResult } from '@/types/dataforseo';
 
 interface AuditResultsDashboardProps {
@@ -256,9 +259,9 @@ const AuditResultsDashboard = ({
 
   const totalIssues = summary.page_metrics?.checks
     ? Object.values(summary.page_metrics.checks).reduce(
-        (sum, count) => sum + count,
-        0,
-      )
+      (sum, count) => sum + count,
+      0,
+    )
     : 0;
 
   return (
@@ -335,7 +338,7 @@ const AuditResultsDashboard = ({
                 Basado en el análisis de{' '}
                 {summary.page_metrics
                   ? summary.page_metrics.links_internal +
-                    summary.page_metrics.links_external
+                  summary.page_metrics.links_external
                   : 0}{' '}
                 elementos
               </p>
@@ -499,15 +502,14 @@ const AuditResultsDashboard = ({
                       <AccordionItem
                         key={checkType}
                         value={checkType}
-                        className={`rounded-lg border ${
-                          issueInfo.type === 'good'
+                        className={`rounded-lg border ${issueInfo.type === 'good'
                             ? 'border-green-200 bg-green-50'
                             : issueInfo.type === 'improvement'
                               ? 'border-yellow-200 bg-yellow-50'
                               : issueInfo.type === 'problem'
                                 ? 'border-red-200 bg-red-50'
                                 : 'border-gray-200 bg-gray-50'
-                        }`}
+                          }`}
                       >
                         <AccordionTrigger
                           className="px-4 py-3 hover:no-underline"
@@ -634,23 +636,23 @@ const AuditResultsDashboard = ({
               )}
               {summary.domain_info.ssl_info?.valid_certificate !==
                 undefined && (
-                <div>
-                  <p className="text-sm font-medium">Certificado SSL</p>
-                  <div className="flex items-center gap-2">
-                    {summary.domain_info.ssl_info.valid_certificate ? (
-                      <>
-                        <CheckCircle2 className="size-4 text-green-600" />
-                        <span className="text-green-600">Válido</span>
-                      </>
-                    ) : (
-                      <>
-                        <AlertCircle className="size-4 text-red-600" />
-                        <span className="text-red-600">Inválido</span>
-                      </>
-                    )}
+                  <div>
+                    <p className="text-sm font-medium">Certificado SSL</p>
+                    <div className="flex items-center gap-2">
+                      {summary.domain_info.ssl_info.valid_certificate ? (
+                        <>
+                          <CheckCircle2 className="size-4 text-green-600" />
+                          <span className="text-green-600">Válido</span>
+                        </>
+                      ) : (
+                        <>
+                          <AlertCircle className="size-4 text-red-600" />
+                          <span className="text-red-600">Inválido</span>
+                        </>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
             </div>
           </CardContent>
         </Card>
@@ -670,18 +672,18 @@ const AuditResultsDashboard = ({
                 contigo.
               </p>
               <div className="flex flex-col justify-center gap-3 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Agenda una Consulta Gratuita
-                </a>
-                <a
-                  href="/pricing"
-                  className="inline-block rounded-lg border border-blue-600 px-6 py-3 font-medium text-blue-600 transition-colors hover:bg-blue-600 hover:text-white"
-                >
-                  Ver Nuestros Planes
-                </a>
+                <Button asChild className="gap-1">
+                  <Link href="/contact">
+                    Agenda una Consulta Gratuita
+                    <ChevronRight className="size-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="gap-1">
+                  <Link href="/pricing">
+                    Ver Nuestros Planes
+                    <ChevronRight className="size-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </CardContent>
