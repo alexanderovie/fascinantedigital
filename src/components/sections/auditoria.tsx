@@ -137,10 +137,11 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
             {/* Status Messages */}
             {submitStatus.type && (
               <div
-                className={`flex items-start gap-3 rounded-lg border p-4 ${submitStatus.type === 'success'
+                className={`flex items-start gap-3 rounded-lg border p-4 ${
+                  submitStatus.type === 'success'
                     ? 'border-green-200 bg-green-50 text-green-800'
                     : 'border-red-200 bg-red-50 text-red-800'
-                  }`}
+                }`}
               >
                 {submitStatus.type === 'success' ? (
                   <CheckCircle2 className="mt-0.5 size-5 flex-shrink-0" />
