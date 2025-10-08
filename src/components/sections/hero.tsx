@@ -33,7 +33,7 @@ export default function Hero() {
               <ChevronRight className="size-4" />
             </Button>
             <Button asChild variant="outline" className="gap-1">
-              <Link href="/contact">
+              <Link href="/auditoria">
                 Obtener reporte gratis
                 <ChevronRight className="size-4" />
               </Link>
