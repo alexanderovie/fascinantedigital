@@ -20,60 +20,64 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Relative - Modern Next.js Template',
-    template: '%s | Relative',
+    default: 'Fascinante Digital - Agencia de Marketing Digital',
+    template: '%s | Fascinante Digital',
   },
   description:
-    'A modern, fully featured Next.js template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.',
+    'Agencia de Marketing Digital para latinos en EE.UU. Impulsamos negocios hispanos con SEO, diseño web, publicidad digital y analítica avanzada.',
   keywords: [
-    'Next.js',
-    'React',
-    'JavaScript',
-    'TypeScript',
-    'TailwindCSS',
-    'Template',
-    'Shadcn/UI',
-    'Web Development',
+    'Marketing Digital',
+    'SEO',
+    'Diseño Web',
+    'Agencia Digital',
+    'West Palm Beach',
+    'Marketing para Latinos',
+    'Publicidad Digital',
+    'Automatización',
   ],
-  authors: [{ name: 'Relative Team' }],
-  creator: 'Relative Team',
-  publisher: 'Relative',
+  authors: [{ name: 'Fascinante Digital' }],
+  creator: 'Fascinante Digital',
+  publisher: 'Fascinante Digital',
+  appleWebApp: {
+    title: 'Fascinante',
+    statusBarStyle: 'default',
+  },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico', sizes: '48x48' },
-      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon/favicon.ico' },
+      { url: '/favicon.ico' },
+      { url: '/icon0.svg', type: 'image/svg+xml' },
     ],
-    apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
-    shortcut: [{ url: '/favicon/favicon.ico' }],
+    apple: [{ url: '/apple-icon.png' }],
+    shortcut: [{ url: '/favicon.ico' }],
   },
+  manifest: '/manifest.json',
   openGraph: {
-    title: 'Relative - Modern Next.js Template',
+    title: 'Fascinante Digital - Agencia de Marketing Digital',
     description:
-      'A modern, fully featured Next.js template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.',
-    siteName: 'Relative',
+      'Agencia de Marketing Digital para latinos en EE.UU. Impulsamos negocios hispanos con SEO, diseño web, publicidad digital y analítica avanzada.',
+    siteName: 'Fascinante Digital',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Relative - Modern Next.js Template',
+        alt: 'Fascinante Digital - Agencia de Marketing Digital',
       },
     ],
+    locale: 'es_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Relative - Modern Next.js Template',
+    title: 'Fascinante Digital - Agencia de Marketing Digital',
     description:
-      'A modern, fully featured Next.js template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.',
+      'Agencia de Marketing Digital para latinos en EE.UU. Impulsamos negocios hispanos con SEO, diseño web y publicidad digital.',
     images: ['/og-image.jpg'],
-    creator: '@Relative',
+    creator: '@FascinanteDigital',
   },
 };
 
@@ -83,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
