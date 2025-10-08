@@ -8,11 +8,11 @@ const Features = () => {
     <section id="smart-productivity" className="pt-12 lg:pt-20">
       <div className="border-y">
         <SectionHeader
-          iconTitle="Características"
-          title="Productividad inteligente con IA"
+          iconTitle="Herramientas"
+          title="Herramientas gratuitas con datos reales"
           icon={PocketKnife}
           description={
-            'Desbloquea productividad más inteligente con funciones que te ayudan a gestionar tareas, tiempo y enfoque sin complicaciones.'
+            'Obtén reportes instantáneos basados en APIs profesionales — sin compromiso.'
           }
         />
       </div>

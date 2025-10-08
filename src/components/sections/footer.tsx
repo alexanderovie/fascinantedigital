@@ -76,8 +76,10 @@ const Footer = () => {
       </div>
       <div className="text-muted-foreground-subtle container border-x border-t border-b py-4 text-sm tracking-[-0.28px] lg:py-8">
         <p>
-          © {new Date().getFullYear()} Fascinante Digital. All rights reserved.
+          © {new Date().getFullYear()} Fascinante Digital. Todos los derechos
+          reservados.
         </p>
+        <p className="mt-2">Datos reales de Google. Estrategias que dominan.</p>
       </div>
       <div className="container h-6 border-x"></div>
     </footer>

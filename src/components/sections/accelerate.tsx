@@ -14,44 +14,44 @@ import SectionHeader from '../section-header';
 
 const TIMELINE_ITEMS = [
   {
-    title: 'Organízate',
+    title: 'Páginas que Funcionan',
     description:
-      'Comienza fuerte sincronizando tus calendarios y herramientas como Google Calendar, Trello y Slack en un solo lugar.',
+      'Identifica qué páginas atraen más tráfico y qué mejorar para multiplicar tus resultados.',
     icon: LayoutList,
     image: {
       src: '/images/homepage/accelerate-1.png',
-      alt: 'Organízate',
+      alt: 'Páginas que Funcionan',
     },
   },
   {
-    title: 'Rastrea el Progreso',
+    title: 'Evolución Mes a Mes',
     description:
-      'Monitorea tu rendimiento con dashboards en tiempo real y analíticas detalladas. Mantente adelante con reportes automatizados.',
+      'Ve tu crecimiento con gráficas históricas de visibilidad, enlaces y keywords.',
     icon: LocateFixed,
     image: {
       src: '/images/homepage/accelerate-2.png',
-      alt: 'Rastrea el Progreso',
+      alt: 'Evolución Mes a Mes',
     },
     reverse: true,
   },
   {
-    title: 'Colabora Sin Esfuerzo',
+    title: 'Comparar con el Top',
     description:
-      'Empodera a tu equipo con dashboards compartidos y herramientas de comunicación instantánea. Mantén a todos alineados con plataformas integradas.',
+      'Analiza qué hacen tus competidores y adopta las tácticas que funcionan para ellos.',
     icon: Users,
     image: {
       src: '/images/homepage/accelerate-3.png',
-      alt: 'Colabora Sin Esfuerzo',
+      alt: 'Comparar con el Top',
     },
   },
   {
-    title: 'Integra Sin Esfuerzo',
+    title: 'Tecnología a tu Favor',
     description:
-      'Integra perfectamente a través de múltiples plataformas para habilitar transferencias de tareas suaves y automatizadas.',
+      'Sal adelante conociendo el CMS, plugins o framework que usan tus rivales.',
     icon: Cpu,
     image: {
       src: '/images/homepage/accelerate-4.png',
-      alt: 'Integra Sin Esfuerzo',
+      alt: 'Tecnología a tu Favor',
     },
     reverse: true,
   },
@@ -62,11 +62,11 @@ const Accelerate = () => {
     <section id="accelerate-planning" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Acelera"
-          title="Acelera tu proceso de planificación"
+          iconTitle="Planifica"
+          title="Diseña tu crecimiento con datos"
           icon={Rocket}
           description={
-            'Toma control de tu flujo de trabajo paso a paso con herramientas inteligentes, insights accionables y colaboración perfecta'
+            'Toma control de tu estrategia digital paso a paso con análisis profesionales, métricas reales y acompañamiento experto'
           }
         />
       </div>

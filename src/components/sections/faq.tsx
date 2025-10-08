@@ -11,34 +11,40 @@ import {
 
 const faqData = [
   {
-    question: '¿Hay una versión gratuita?',
+    question: '¿Qué datos muestran estas herramientas?',
     answer:
-      '¡Sí! Ofrecemos un Plan Gratis con funciones esenciales. Puedes actualizar en cualquier momento para herramientas avanzadas e integraciones.',
+      'Verás posiciones exactas en tiempo real, fragmentos destacados, enlaces perdidos/nuevos, reseñas, visibilidad local y comparativas con competidores.',
   },
   {
-    question: '¿Qué aplicaciones puedo integrar?',
+    question: '¿Con qué frecuencia se actualizan los datos?',
     answer:
-      'Nuestra plataforma soporta integración con varias aplicaciones y servicios populares. Las integraciones específicas disponibles dependen de tu nivel de plan.',
+      'Cada semana o diariamente, dependiendo del plan. Estamos conectados directamente con el motor de búsqueda.',
   },
   {
-    question: '¿Cómo funciona la IA?',
+    question: '¿Quién puede ver mis datos?',
     answer:
-      'Nuestra tecnología de IA usa algoritmos avanzados de aprendizaje automático para analizar y procesar tus datos, proporcionando insights inteligentes y capacidades de automatización.',
+      'Solo tú y tu equipo. No compartimos ni filtramos con otras marcas.',
   },
   {
-    question: '¿Puedo usar esto con un equipo?',
+    question: '¿Puedo ver los datos de mi competencia?',
     answer:
-      '¡Absolutamente! Nuestra plataforma está diseñada para uso individual y de equipo. Puedes colaborar fácilmente y compartir recursos con miembros del equipo.',
+      'Sí, puedes comparar tu dominio con hasta 3 competidores en palabras clave, enlaces y visibilidad.',
   },
   {
-    question: '¿Mis datos están seguros?',
+    question:
+      '¿Por qué trabajar con ustedes en vez de usar SEMrush o Ahrefs gratis?',
     answer:
-      'Tomamos la seguridad de datos en serio. Todos los datos están encriptados y almacenados de forma segura siguiendo las mejores prácticas y estándares de cumplimiento de la industria.',
+      'Porque esos servicios usan estimaciones. Nosotros usamos datos directos del motor de búsqueda, no suposiciones.',
   },
   {
-    question: '¿Cómo gestiono mi suscripción?',
+    question: '¿Qué pasa si pierdo posicionamientos?',
     answer:
-      'Puedes gestionar tu suscripción fácilmente a través de tu dashboard de cuenta, donde puedes actualizar, bajar de nivel o modificar la configuración de tu plan.',
+      'Detectamos pérdidas inmediatas y sugerimos ajustes para recuperarte rápido.',
+  },
+  {
+    question: '¿Qué tan actualizados son los datos?',
+    answer:
+      'En planes intermedios se actualizan semanalmente. En los niveles superiores, puedes tener datos prácticamente en tiempo real.',
   },
 ];
 
@@ -53,12 +59,12 @@ const Faq = ({ withBorders = true }: { withBorders?: boolean }) => {
               : '!max-w-[480px] !border-none lg:items-center lg:text-center'
           }
           iconTitle="FAQ"
-          title="Todo lo que Necesitas Saber"
+          title="Preguntas Frecuentes"
           icon={MessageCircleQuestion}
           description={
             <>
-              ¿Buscas respuestas rápidas? Consulta nuestra{' '}
-              <span className="underline">sección de FAQ</span>.
+              Resolvemos tus dudas sobre datos, herramientas y análisis en{' '}
+              <span className="underline">tiempo real</span>.
             </>
           }
         />

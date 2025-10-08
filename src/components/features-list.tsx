@@ -10,23 +10,23 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const FEATURES_DATA = [
   {
-    title: 'Gestión Inteligente de Tareas',
+    title: 'Top 20 Keywords Gratis',
     description:
-      'Crea, prioriza y delega tareas sin esfuerzo. La IA te ayuda a identificar lo más importante con recomendaciones inteligentes y flujos automatizados.',
+      'Ve tus 20 palabras más buscadas con su posición exacta y volumen local en tu ciudad.',
     icon: SquarePen,
     image: '/images/homepage/features-1.png',
   },
   {
-    title: 'Programación Automatizada',
+    title: 'Auditoría Técnica Express',
     description:
-      'Deja que la IA encuentre los mejores horarios para reuniones, recordatorios y tareas según tu calendario y hábitos laborales. Mantente organizado sin complicaciones.',
+      'Detecta hasta 5 errores SEO críticos que Google penaliza — enlaces rotos, falta de meta tags, estructura inválida.',
     icon: CalendarClock,
     image: '/images/homepage/features-2.png',
   },
   {
-    title: 'Insights Personalizados',
+    title: 'Comparativo con 3 Competidores',
     description:
-      'Rastrea tu productividad con insights de IA. Recibe resúmenes semanales y consejos prácticos para mejorar tu flujo de trabajo y gestionar mejor tus cargas.',
+      'Compara tu dominio con hasta 3 rivales: quién te gana y por qué en enlaces, keywords y visibilidad.',
     icon: ChartBar,
     image: '/images/homepage/features-3.png',
   },

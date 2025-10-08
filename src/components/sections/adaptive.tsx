@@ -8,11 +8,11 @@ const Adaptive = () => {
     <section id="adaptive-workflows" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Adaptativo"
-          title="Mantente ágil con flujos adaptativos"
+          iconTitle="Estrategia"
+          title="Cada decisión respaldada por datos"
           icon={Shapes}
           description={
-            'La IA optimiza tus procesos para ajustarse cuando las prioridades cambian.'
+            'No actuamos al azar. Tu estrategia se basa en tu ranking real, tendencias locales y comparativas de competencia.'
           }
         />
       </div>

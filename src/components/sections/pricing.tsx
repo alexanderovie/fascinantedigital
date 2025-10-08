@@ -39,49 +39,49 @@ interface FeatureSection {
 const pricingPlans: PricingPlan[] = [
   {
     icon: Rocket,
-    name: 'Plan Básico',
+    name: 'Esencial',
     price: {
       monthly: 19,
       yearly: 199,
     },
     features: [
-      'Herramientas básicas de gestión de tareas',
-      'Sincronización de calendario con integraciones limitadas',
-      'Acceso a 1 dashboard para rastrear tareas',
-      'Sugerencias e insights de IA limitados',
-      'Soporte básico y acceso a la comunidad',
+      '100 keywords con SERP API (posición & volumen)',
+      'Auditoría técnica completa con OnPage API',
+      'Reporte comparativo con 2 competidores',
+      'Análisis de palabras más buscadas en tu zona',
+      'Soporte por email',
     ],
   },
   {
     icon: Briefcase,
-    name: 'Plan Negocios',
+    name: 'Estrategia Pro',
     price: {
       monthly: 29,
       yearly: 299,
     },
     features: [
-      'Todas las funciones del Plan Gratis, más:',
-      'Listas de tareas ilimitadas',
-      'Sincronización avanzada de calendario',
-      'Insights impulsados por IA',
-      'Acceso a dashboards personalizados',
-      'Soporte prioritario por email',
+      'Todo del plan Esencial, más:',
+      'Monitoreo en vivo de posicionamientos',
+      'Seguimiento de backlinks (nuevos / perdidos)',
+      'Análisis de local pack & reseñas',
+      'Dashboard con métricas en tiempo real',
+      'Soporte prioritario',
     ],
   },
   {
     icon: Building,
-    name: 'Plan Empresarial',
+    name: 'Crecimiento Total',
     price: {
       monthly: 49,
       yearly: 499,
     },
     features: [
-      'Todas las funciones del Plan Pro, más:',
+      'Todo del plan Pro, más:',
+      'Todas las APIs: SERP, Backlinks, OnPage, Business Data',
+      'Dashboard 24/7 con datos de tu nicho',
+      'Comparativas y recomendaciones personalizadas',
       'Gerente de cuenta dedicado',
-      'Integraciones personalizadas',
-      'Colaboración en tiempo real',
-      'Permisos basados en roles',
-      'Soporte prioritario 24/7',
+      'Soporte 24/7',
     ],
   },
 ];
@@ -204,10 +204,10 @@ const Pricing = ({ withBorders = true }: { withBorders?: boolean }) => {
           className={
             withBorders ? '' : 'border-none lg:items-center lg:text-center'
           }
-          iconTitle="Salón de Precios"
-          title="Precios para todos"
+          iconTitle="Planes"
+          title="Planes hechos para marcas que quieren dominar"
           icon={BadgeDollarSign}
-          description="Elige el Plan que se Ajuste a tus Necesidades de Productividad"
+          description="Cada nivel incluye acceso a herramientas que otras agencias cobran $300-500/mes."
         />
       </div>
 

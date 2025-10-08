@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 const DATA = [
   {
-    subTitle: 'Programación Unificada',
-    title: 'Programación Unificada',
+    subTitle: 'Keyword Insight Local',
+    title: 'Keyword Insight Local',
     description:
-      'Mantén todas tus citas y eventos sincronizados con conectividad de calendario perfecta entre plataformas.',
+      'Estudiamos tus keywords con volumen, competencia y tendencias reales de tu ciudad para enfocar esfuerzos.',
     icon: 'CircleHelp',
     image: '/images/homepage/adaptive-1.png',
   },
   {
-    subTitle: 'Rendimiento con Insights',
-    title: 'Rendimiento con Insights',
+    subTitle: 'SEO Técnico a Nivel Experto',
+    title: 'SEO Técnico a Nivel Experto',
     description:
-      'Obtén analíticas claras en tiempo real que rastreen tu progreso, hitos clave, horas de enfoque y tareas completadas.',
+      'Auditoría avanzada con posibles mejoras inmediatas: velocidad, estructura, links internos y más.',
     icon: 'Volume2',
     image: '/images/homepage/adaptive-2.png',
   },
   {
-    subTitle: 'Integraciones Sin Esfuerzo',
-    title: 'Integraciones Sin Esfuerzo',
+    subTitle: 'Seguimiento Competitivo',
+    title: 'Seguimiento Competitivo',
     description:
-      'Conecta tus aplicaciones y servicios favoritos para optimizar el trabajo sin cambiar entre plataformas.',
+      'Te mostramos cómo tus rivales están posicionados, qué les funciona y cómo superarlos.',
     icon: 'Lightbulb',
     image: '/images/homepage/adaptive-3.png',
   },

@@ -8,11 +8,11 @@ const Optimize = () => {
     <section id="optimized-scheduling" className="">
       <div className="border-b">
         <SectionHeader
-          iconTitle="Optimiza"
-          title="Optimiza cada aspecto de tu día"
+          iconTitle="Presencia"
+          title="Haz que te encuentren donde importa"
           icon={Eye}
           description={
-            'Logra productividad perfecta con programación inteligente, analíticas perspicaces e integraciones sin esfuerzo.'
+            'Aparece en Google, Maps y búsquedas locales con estrategias optimizadas con APIs profesionales.'
           }
         />
       </div>

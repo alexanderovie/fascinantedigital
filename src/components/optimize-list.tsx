@@ -11,23 +11,23 @@ import { cn } from '@/lib/utils';
 
 const OPTIMIZE_DATA = [
   {
-    title: 'Programación Unificada',
+    title: 'Mapas y Local Pack',
     description:
-      'Mantén todas tus citas y eventos sincronizados con conectividad de calendario perfecta entre plataformas.',
+      'Medimos tu visibilidad en Google Maps y local pack frente a tus competidores directos.',
     icon: CircleHelp,
     image: '/images/homepage/optimize-1.png',
   },
   {
-    title: 'Rendimiento con Insights',
+    title: 'Reseñas Analizadas',
     description:
-      'Obtén analíticas claras en tiempo real que rastreen tu progreso, hitos clave, horas de enfoque y tareas completadas.',
+      'Analizamos tus reseñas, puntuaciones y menciones para optimizar tu reputación digital.',
     icon: Volume2,
     image: '/images/homepage/optimize-2.png',
   },
   {
-    title: 'Integraciones Sin Esfuerzo',
+    title: 'Posicionamiento Estratégico',
     description:
-      'Conecta tus aplicaciones y servicios favoritos para optimizar el trabajo sin cambiar entre plataformas.',
+      'Creamos campañas basadas en lo que la gente busca exactamente en tu zona, no lo que creemos que buscan.',
     icon: Lightbulb,
     image: '/images/homepage/optimize-3.png',
   },
