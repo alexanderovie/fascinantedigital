@@ -43,7 +43,7 @@ const FeaturesList = () => {
           <TabsTrigger
             key={item.title}
             value={item.title}
-            className="group relative border-b px-1 py-5 text-start whitespace-normal data-[state=active]:shadow-none lg:px-8"
+            className="group relative border-b px-4 py-5 text-start whitespace-normal data-[state=active]:shadow-none md:px-6 lg:px-8"
           >
             <div
               className={`absolute bottom-[-1px] left-0 z-10 h-[1px] w-0 bg-gradient-to-r from-blue-600 via-sky-300 to-transparent transition-all duration-300 group-data-[state=active]:w-1/2`}
