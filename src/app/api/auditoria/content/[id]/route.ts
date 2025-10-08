@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getOnPageService } from '@/lib/dataforseo/onpage';
 
 /**
- * GET /api/auditoria/content/[id]?url=[url]
+ * GET /api/auditoria/content/[id]
  * Obtiene el análisis de contenido (parsing) para una auditoría
  */
 export async function GET(
@@ -12,26 +12,23 @@ export async function GET(
 ) {
   try {
     const { id } = await context.params;
-    const { searchParams } = new URL(request.url);
-    const url = searchParams.get('url');
 
-    if (!id || !url) {
+    if (!id) {
       return NextResponse.json(
         {
           success: false,
-          message: 'Task ID and URL are required',
+          message: 'Task ID is required',
         },
         { status: 400 },
       );
     }
 
     const onPageService = getOnPageService();
-    const content = await onPageService.getContentParsing(id, url);
+    const content = await onPageService.getContentParsing(id);
 
     return NextResponse.json({
       success: true,
       taskId: id,
-      url,
       content,
     });
   } catch (error) {
