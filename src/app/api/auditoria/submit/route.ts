@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     // 3. Crear tarea OnPage en DataForSEO
     const onPageService = getOnPageService();
     const taskId = await onPageService.createTask(validatedData.website, {
-      maxPages: 100,
+      maxPages: 1, // Solo página raíz por ahora
       enableJavaScript: true,
       pingbackUrl,
       tag: `audit_${Date.now()}_${validatedData.email}`,
