@@ -12,7 +12,7 @@ import {
   ChevronRight,
   Info,
   Loader2,
-  TrendingUp
+  TrendingUp,
 } from 'lucide-react';
 
 import TitleTag from '@/components/title-tag';
@@ -260,9 +260,9 @@ const AuditResultsDashboard = ({
 
   const totalIssues = summary.page_metrics?.checks
     ? Object.values(summary.page_metrics.checks).reduce(
-      (sum, count) => sum + count,
-      0,
-    )
+        (sum, count) => sum + count,
+        0,
+      )
     : 0;
 
   return (
@@ -340,7 +340,7 @@ const AuditResultsDashboard = ({
                 Basado en el análisis de{' '}
                 {summary.page_metrics
                   ? summary.page_metrics.links_internal +
-                  summary.page_metrics.links_external
+                    summary.page_metrics.links_external
                   : 0}{' '}
                 elementos
               </p>
@@ -504,14 +504,15 @@ const AuditResultsDashboard = ({
                       <AccordionItem
                         key={checkType}
                         value={checkType}
-                        className={`rounded-lg border ${issueInfo.type === 'good'
+                        className={`rounded-lg border ${
+                          issueInfo.type === 'good'
                             ? 'border-green-200 bg-green-50'
                             : issueInfo.type === 'improvement'
                               ? 'border-yellow-200 bg-yellow-50'
                               : issueInfo.type === 'problem'
                                 ? 'border-red-200 bg-red-50'
                                 : 'border-gray-200 bg-gray-50'
-                          }`}
+                        }`}
                       >
                         <AccordionTrigger
                           className="px-4 py-3 hover:no-underline"
@@ -528,11 +529,12 @@ const AuditResultsDashboard = ({
                                 <h3 className="font-semibold text-gray-900">
                                   {issueInfo.title}
                                 </h3>
-                              <Badge
-                                className={`${issueInfo.badgeColor} ml-2`}
-                              >
-                                {count} {count !== 1 ? 'instancias' : 'instancia'}
-                              </Badge>
+                                <Badge
+                                  className={`${issueInfo.badgeColor} ml-2`}
+                                >
+                                  {count}{' '}
+                                  {count !== 1 ? 'instancias' : 'instancia'}
+                                </Badge>
                               </div>
                               <p className="mt-1 text-sm text-gray-700">
                                 {issueInfo.description}
@@ -638,23 +640,23 @@ const AuditResultsDashboard = ({
               )}
               {summary.domain_info.ssl_info?.valid_certificate !==
                 undefined && (
-                  <div>
-                    <p className="text-sm font-medium">Certificado SSL</p>
-                    <div className="flex items-center gap-2">
-                      {summary.domain_info.ssl_info.valid_certificate ? (
-                        <>
-                          <CheckCircle2 className="size-4 text-green-600" />
-                          <span className="text-green-600">Válido</span>
-                        </>
-                      ) : (
-                        <>
-                          <AlertCircle className="size-4 text-red-600" />
-                          <span className="text-red-600">Inválido</span>
-                        </>
-                      )}
-                    </div>
+                <div>
+                  <p className="text-sm font-medium">Certificado SSL</p>
+                  <div className="flex items-center gap-2">
+                    {summary.domain_info.ssl_info.valid_certificate ? (
+                      <>
+                        <CheckCircle2 className="size-4 text-green-600" />
+                        <span className="text-green-600">Válido</span>
+                      </>
+                    ) : (
+                      <>
+                        <AlertCircle className="size-4 text-red-600" />
+                        <span className="text-red-600">Inválido</span>
+                      </>
+                    )}
                   </div>
-                )}
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>
