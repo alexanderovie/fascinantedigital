@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import Auditoria from '@/components/sections/auditoria';
+import Testimonials from '@/components/sections/testimonials';
 
 export const metadata: Metadata = {
   title: 'Auditoría SEO Gratuita',
@@ -11,6 +12,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AuditoriaPage() {
-  return <Auditoria />;
-}
+const AuditoriaPage = () => {
+  return (
+    <div className="py-14 md:py-20 lg:py-24">
+      <Auditoria withBorders={false} />
+      <div className="py-14 md:py-20 lg:py-24">
+        <Testimonials withBorders={false} />
+      </div>
+    </div>
+  );
+};
+
+export default AuditoriaPage;
