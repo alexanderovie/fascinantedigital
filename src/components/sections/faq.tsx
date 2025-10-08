@@ -11,40 +11,39 @@ import {
 
 const faqData = [
   {
-    question: '¿Qué datos muestran estas herramientas?',
+    question: '¿Qué obtengo con el análisis gratuito?',
     answer:
-      'Verás posiciones exactas en tiempo real, fragmentos destacados, enlaces perdidos/nuevos, reseñas, visibilidad local y comparativas con competidores.',
+      'Un resumen claro con tus principales oportunidades para atraer más clientes.',
   },
   {
-    question: '¿Con qué frecuencia se actualizan los datos?',
+    question: '¿Cuánto tardaré en ver resultados?',
     answer:
-      'Cada semana o diariamente, dependiendo del plan. Estamos conectados directamente con el motor de búsqueda.',
+      'En la mayoría de los casos, notarás mejoras visibles en las primeras semanas.',
   },
   {
-    question: '¿Quién puede ver mis datos?',
+    question: '¿Qué diferencia tienen ustedes frente a otras agencias?',
     answer:
-      'Solo tú y tu equipo. No compartimos ni filtramos con otras marcas.',
+      'Trabajamos con datos reales, no con suposiciones, y te mostramos todo de forma simple.',
   },
   {
-    question: '¿Puedo ver los datos de mi competencia?',
+    question: '¿Puedo ver cómo va mi negocio?',
     answer:
-      'Sí, puedes comparar tu dominio con hasta 3 competidores en palabras clave, enlaces y visibilidad.',
+      'Sí. Tendrás acceso a reportes visuales con tus avances y recomendaciones.',
   },
   {
-    question:
-      '¿Por qué trabajar con ustedes en vez de usar SEMrush o Ahrefs gratis?',
+    question: '¿Puedo saber qué hacen mis competidores?',
     answer:
-      'Porque esos servicios usan estimaciones. Nosotros usamos datos directos del motor de búsqueda, no suposiciones.',
+      'Claro. Te mostramos su visibilidad y qué puedes hacer para superarlos.',
   },
   {
-    question: '¿Qué pasa si pierdo posicionamientos?',
+    question: '¿Qué pasa si mi negocio no aparece todavía en Google?',
     answer:
-      'Detectamos pérdidas inmediatas y sugerimos ajustes para recuperarte rápido.',
+      'Te ayudamos a crear y optimizar tu perfil paso a paso hasta que empieces a recibir visitas.',
   },
   {
-    question: '¿Qué tan actualizados son los datos?',
+    question: '¿Por qué debería empezar ahora?',
     answer:
-      'En planes intermedios se actualizan semanalmente. En los niveles superiores, puedes tener datos prácticamente en tiempo real.',
+      'Porque cada día que pasa, otro negocio está ganando los clientes que podrían ser tuyos.',
   },
 ];
 
