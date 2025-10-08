@@ -28,9 +28,6 @@ export default function Hero() {
               <ChevronRight className="size-4" />
             </Link>
           </Button>
-          <p className="text-muted-foreground mx-auto mt-4 text-sm">
-            Más de 300 marcas latinas ya crecen con nosotros
-          </p>
         </div>
         <BorderedSection className="border-r-0 border-l 2xl:flex-1">
           <DiagonalPattern />
