@@ -57,8 +57,8 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
           description={
             <>
               Descubre{' '}
-              <span className="underline">cómo está tu presencia digital</span> y
-              qué oportunidades tienes para atraer más clientes.
+              <span className="underline">cómo está tu presencia digital</span>{' '}
+              y qué oportunidades tienes para atraer más clientes.
             </>
           }
         />
@@ -71,7 +71,9 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
               <div key={field.id} className="space-y-2">
                 <Label className="text-sm font-normal" htmlFor={field.id}>
                   {field.label}
-                  {field.required && <span className="ml-1 text-red-500">*</span>}
+                  {field.required && (
+                    <span className="ml-1 text-red-500">*</span>
+                  )}
                 </Label>
                 <field.component
                   id={field.id}
