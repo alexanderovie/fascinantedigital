@@ -23,11 +23,14 @@ export default function Hero() {
             efectivas.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-8 lg:mt-10">
-            <Button asChild className="gap-1">
-              <Link href="/contact">
-                Quiero más clientes ahora
-                <ChevronRight className="size-4" />
-              </Link>
+            <Button
+              className="gap-1"
+              data-cal-link="fascinante-digital/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Quiero más clientes ahora
+              <ChevronRight className="size-4" />
             </Button>
             <Button asChild variant="outline" className="gap-1">
               <Link href="/contact">
