@@ -161,6 +161,7 @@ function TestimonialCard({ logo, quote, author }: TestimonialProps) {
           alt={`${author.name}'s profile picture`}
           width={48}
           height={48}
+          sizes="48px"
           className="rounded-full object-cover"
         />
         <div>

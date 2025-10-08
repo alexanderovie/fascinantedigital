@@ -62,7 +62,7 @@ export default function Hero() {
             className="mx-auto rounded-xl border object-contain p-1 shadow-lg 2xl:max-w-[1092px] dark:invert"
             width={1000}
             height={600}
-            sizes="(max-width: 768px) 400px, (max-width: 1200px) 800px, 1000px"
+            sizes="(max-width: 640px) 360px, (max-width: 768px) 400px, (max-width: 1200px) 800px, 1000px"
             priority
             fetchPriority="high"
           />
