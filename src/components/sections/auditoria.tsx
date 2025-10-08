@@ -88,7 +88,7 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
           className={
             withBorders
               ? ''
-              : '!max-w-[480px] !border-none lg:items-center lg:text-center'
+              : '!max-w-[600px] !border-none lg:items-center lg:text-center'
           }
           iconTitle="Auditoría"
           title="Obtén tu auditoría SEO gratuita"
