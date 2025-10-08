@@ -1,0 +1,206 @@
+import { getDataForSEOClient } from './client';
+import type {
+  OnPageTaskPostRequest,
+  OnPageTaskPostResult,
+  OnPageSummaryResult,
+  OnPagePageResult,
+  OnPagePagesRequest,
+} from '@/types/dataforseo';
+
+/**
+ * Servicio para la API OnPage de DataForSEO
+ */
+export class OnPageService {
+  private client = getDataForSEOClient();
+
+  /**
+   * Crear una nueva tarea de auditoría OnPage
+   */
+  async createTask(
+    url: string,
+    options?: {
+      maxPages?: number;
+      enableJavaScript?: boolean;
+      pingbackUrl?: string;
+      tag?: string;
+    }
+  ): Promise<string> {
+    const { maxPages = 100, enableJavaScript = true, pingbackUrl, tag } = options || {};
+
+    const taskData: OnPageTaskPostRequest[] = [
+      {
+        target: url,
+        max_crawl_pages: maxPages,
+        load_resources: true,
+        enable_javascript: enableJavaScript,
+        enable_browser_rendering: enableJavaScript,
+        tag: tag || `audit_${Date.now()}`,
+        pingback_url: pingbackUrl,
+      },
+    ];
+
+    const response = await this.client.request<OnPageTaskPostResult>(
+      '/v3/on_page/task_post',
+      taskData
+    );
+
+    if (!response.tasks?.[0]?.result?.[0]?.id) {
+      throw new Error('Failed to create OnPage task: No task ID returned');
+    }
+
+    return response.tasks[0].result[0].id;
+  }
+
+  /**
+   * Obtener el resumen de una auditoría
+   */
+  async getSummary(taskId: string): Promise<OnPageSummaryResult> {
+    const response = await this.client.get<OnPageSummaryResult>(
+      `/v3/on_page/summary/${taskId}`
+    );
+
+    if (!response.tasks?.[0]?.result?.[0]) {
+      throw new Error('Failed to get OnPage summary: No result returned');
+    }
+
+    return response.tasks[0].result[0];
+  }
+
+  /**
+   * Obtener las páginas analizadas
+   */
+  async getPages(
+    taskId: string,
+    options?: {
+      limit?: number;
+      offset?: number;
+      filters?: any[];
+    }
+  ): Promise<OnPagePageResult[]> {
+    const { limit = 100, offset = 0, filters = [] } = options || {};
+
+    const requestData: OnPagePagesRequest[] = [
+      {
+        id: taskId,
+        limit,
+        offset,
+        filters,
+      },
+    ];
+
+    const response = await this.client.request<OnPagePageResult>(
+      '/v3/on_page/pages',
+      requestData
+    );
+
+    return response.tasks?.[0]?.result || [];
+  }
+
+  /**
+   * Obtener errores encontrados en la auditoría
+   */
+  async getErrors(taskId: string): Promise<any[]> {
+    const requestData = [
+      {
+        id: taskId,
+        limit: 100,
+      },
+    ];
+
+    const response = await this.client.request(
+      '/v3/on_page/errors',
+      requestData
+    );
+
+    return response.tasks?.[0]?.result || [];
+  }
+
+  /**
+   * Obtener contenido duplicado
+   */
+  async getDuplicateContent(taskId: string, url: string): Promise<any[]> {
+    const requestData = [
+      {
+        id: taskId,
+        url: url,
+      },
+    ];
+
+    const response = await this.client.request(
+      '/v3/on_page/duplicate_content',
+      requestData
+    );
+
+    return response.tasks?.[0]?.result || [];
+  }
+
+  /**
+   * Obtener tags duplicados (títulos, descripciones, etc.)
+   */
+  async getDuplicateTags(
+    taskId: string,
+    type: 'duplicate_title' | 'duplicate_description' | 'duplicate_h1'
+  ): Promise<any[]> {
+    const requestData = [
+      {
+        id: taskId,
+        type: type,
+        limit: 100,
+      },
+    ];
+
+    const response = await this.client.request(
+      '/v3/on_page/duplicate_tags',
+      requestData
+    );
+
+    return response.tasks?.[0]?.result || [];
+  }
+
+  /**
+   * Verificar si una tarea está completa
+   */
+  async isTaskComplete(taskId: string): Promise<boolean> {
+    try {
+      const summary = await this.getSummary(taskId);
+      return summary.crawl_progress === 'finished';
+    } catch (error) {
+      console.error('Error checking task status:', error);
+      return false;
+    }
+  }
+
+  /**
+   * Esperar a que una tarea se complete
+   */
+  async waitForCompletion(
+    taskId: string,
+    options?: {
+      maxWaitTime?: number; // en milisegundos
+      checkInterval?: number; // en milisegundos
+    }
+  ): Promise<OnPageSummaryResult> {
+    const { maxWaitTime = 300000, checkInterval = 5000 } = options || {}; // 5 min max
+    const startTime = Date.now();
+
+    while (Date.now() - startTime < maxWaitTime) {
+      const isComplete = await this.isTaskComplete(taskId);
+
+      if (isComplete) {
+        return await this.getSummary(taskId);
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, checkInterval));
+    }
+
+    throw new Error('Task did not complete within the maximum wait time');
+  }
+}
+
+/**
+ * Factory function para obtener el servicio OnPage
+ */
+export function getOnPageService(): OnPageService {
+  return new OnPageService();
+}
+
