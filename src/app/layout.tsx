@@ -20,6 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fascinantedigital.com'),
   title: {
     default: 'Fascinante Digital - Agencia de Marketing Digital',
     template: '%s | Fascinante Digital',
@@ -42,6 +43,9 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: 'Fascinante',
     statusBarStyle: 'default',
+  },
+  alternates: {
+    canonical: '/',
   },
   robots: {
     index: true,

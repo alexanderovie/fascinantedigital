@@ -1,12 +1,15 @@
-import React from 'react';
+import type { Metadata } from 'next';
 
 import Faq from '@/components/sections/faq';
 import Testimonials from '@/components/sections/testimonials';
 
-export const metadata = {
-  title: 'FAQ - Your Questions Answered',
+export const metadata: Metadata = {
+  title: 'Preguntas Frecuentes',
   description:
-    'Find answers to commonly asked questions about our platform and services.',
+    'Preguntas frecuentes sobre nuestras herramientas SEO, análisis de datos en tiempo real y planes de marketing digital.',
+  alternates: {
+    canonical: '/faq',
+  },
 };
 
 const FaqPage = () => {

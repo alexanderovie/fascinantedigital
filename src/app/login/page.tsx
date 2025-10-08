@@ -1,11 +1,17 @@
-import React from 'react';
+import type { Metadata } from 'next';
 
 import LoginSection from '@/components/sections/login-section';
 
-export const metadata = {
-  title: 'FAQ - Your Questions Answered',
-  description:
-    'Find answers to commonly asked questions about our platform and services.',
+export const metadata: Metadata = {
+  title: 'Iniciar Sesión',
+  description: 'Inicia sesión en tu cuenta de Fascinante Digital.',
+  alternates: {
+    canonical: '/login',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const LoginPage = () => {

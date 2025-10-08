@@ -1,13 +1,16 @@
-import React from 'react';
+import type { Metadata } from 'next';
 
 import Faq from '@/components/sections/faq';
 import Pricing from '@/components/sections/pricing';
 import Testimonials from '@/components/sections/testimonials';
 
-export const metadata = {
-  title: 'Pricing - Plans for Everyone',
+export const metadata: Metadata = {
+  title: 'Precios',
   description:
-    'Choose the perfect plan for your productivity needs with our flexible pricing options.',
+    'Planes de marketing digital desde $19/mes. Incluye acceso a herramientas profesionales SEO que otras agencias cobran $300-500/mes.',
+  alternates: {
+    canonical: '/pricing',
+  },
 };
 
 const PricingPage = () => {

@@ -1,11 +1,17 @@
-import React from 'react';
+import type { Metadata } from 'next';
 
 import SignupSection from '@/components/sections/signup-section';
 
-export const metadata = {
-  title: 'FAQ - Your Questions Answered',
-  description:
-    'Find answers to commonly asked questions about our platform and services.',
+export const metadata: Metadata = {
+  title: 'Registrarse',
+  description: 'Crea tu cuenta en Fascinante Digital y comienza a impulsar tu negocio.',
+  alternates: {
+    canonical: '/signup',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const LoginPage = () => {

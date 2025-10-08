@@ -1,8 +1,19 @@
+import type { Metadata } from 'next';
+
 import AboutHero from '@/components/sections/about-hero';
 import Partners from '@/components/sections/partners';
 import Team from '@/components/sections/team';
 import Testimonials from '@/components/sections/testimonials';
 import Values from '@/components/sections/values';
+
+export const metadata: Metadata = {
+  title: 'Sobre Nosotros',
+  description:
+    'Conoce a Fascinante Digital, agencia de marketing digital enfocada en impulsar negocios latinos en EE.UU. con estrategias basadas en datos reales.',
+  alternates: {
+    canonical: '/about',
+  },
+};
 
 const METRICS = [
   {
