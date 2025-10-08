@@ -52,13 +52,11 @@ export async function POST(request: NextRequest) {
     const summary = await onPageService.getSummary(validatedPayload.id);
 
     // 6. Calcular métricas simplificadas
-    const totalIssues = Object.values(summary.checks || {}).reduce(
-      (sum, count) => sum + count,
-      0,
-    );
-    const criticalIssues = summary.checks?.['broken_links'] || 0;
-    const warnings = summary.checks?.['duplicate_title'] || 0;
-    const score = summary.on_page_score || 0;
+    const totalIssues = summary.page_metrics?.checks ? 
+      Object.values(summary.page_metrics.checks).reduce((sum, count) => sum + count, 0) : 0;
+    const criticalIssues = summary.page_metrics?.checks?.['broken_links'] || 0;
+    const warnings = summary.page_metrics?.checks?.['duplicate_title'] || 0;
+    const score = summary.page_metrics?.onpage_score || 0;
 
     // 7. Enviar email con resultados
     const emailService = getEmailService();

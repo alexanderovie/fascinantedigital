@@ -1,11 +1,11 @@
 'use client';
 
-import { AlertCircle, AlertTriangle, CheckCircle2, Clock, Info, TrendingUp, ChevronDown } from 'lucide-react';
+import { AlertCircle, AlertTriangle, CheckCircle2, Clock, Info, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import type { OnPageSummaryResult } from '@/types/dataforseo';
 
 interface AuditResultsDashboardProps {
@@ -144,7 +144,7 @@ const AuditResultsDashboard = ({
   // Función para obtener las páginas específicas de un problema
   const fetchPagesForIssue = async (checkType: string) => {
     if (pagesData[checkType]) return; // Ya tenemos los datos
-    
+
     try {
       const response = await fetch(`/api/auditoria/pages/${taskId}?checkType=${checkType}`);
       if (response.ok) {
@@ -371,109 +371,109 @@ const AuditResultsDashboard = ({
         </Card>
       )}
 
-       {/* Análisis Detallado */}
-       {summary.page_metrics?.checks && Object.keys(summary.page_metrics.checks).length > 0 && (
-         <Card>
-           <CardHeader>
-             <h2 className="text-xl font-bold">Análisis Detallado de tu Sitio</h2>
-             <p className="text-muted-foreground text-sm">
-               Aquí tienes todo lo que encontramos, explicado de forma simple. Haz clic en cada elemento para ver las páginas específicas.
-             </p>
-           </CardHeader>
-           <CardContent>
-             <Accordion type="multiple" className="space-y-2">
-               {Object.entries(summary.page_metrics.checks)
-                 .filter(([_, count]) => count > 0)
-                 .sort(([_, a], [__, b]) => b - a)
-                 .map(([checkType, count]) => {
-                   const issueInfo = categorizeIssue(checkType, count);
-                   const IconComponent = issueInfo.icon;
-                   const isExpanded = expandedIssues.has(checkType);
-                   const pages = pagesData[checkType] || [];
+      {/* Análisis Detallado */}
+      {summary.page_metrics?.checks && Object.keys(summary.page_metrics.checks).length > 0 && (
+        <Card>
+          <CardHeader>
+            <h2 className="text-xl font-bold">Análisis Detallado de tu Sitio</h2>
+            <p className="text-muted-foreground text-sm">
+              Aquí tienes todo lo que encontramos, explicado de forma simple. Haz clic en cada elemento para ver las páginas específicas.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <Accordion type="multiple" className="space-y-2">
+              {Object.entries(summary.page_metrics.checks)
+                .filter(([_, count]) => count > 0)
+                .sort(([_, a], [__, b]) => b - a)
+                .map(([checkType, count]) => {
+                  const issueInfo = categorizeIssue(checkType, count);
+                  const IconComponent = issueInfo.icon;
+                  const isExpanded = expandedIssues.has(checkType);
+                  const pages = pagesData[checkType] || [];
 
-                   return (
-                     <AccordionItem
-                       key={checkType}
-                       value={checkType}
-                       className={`rounded-lg border ${issueInfo.type === 'good' ? 'border-green-200 bg-green-50' :
-                           issueInfo.type === 'improvement' ? 'border-yellow-200 bg-yellow-50' :
-                             issueInfo.type === 'problem' ? 'border-red-200 bg-red-50' :
-                               'border-gray-200 bg-gray-50'
-                         }`}
-                     >
-                       <AccordionTrigger
-                         className="px-4 py-3 hover:no-underline"
-                         onClick={() => handleAccordionChange(checkType, !isExpanded)}
-                       >
-                         <div className="flex items-center gap-3 flex-1">
-                           <IconComponent className={`size-5 ${issueInfo.color} flex-shrink-0`} />
-                           <div className="flex-1 text-left">
-                             <div className="flex items-center justify-between">
-                               <h3 className="font-semibold text-gray-900">
-                                 {issueInfo.title}
-                               </h3>
-                               <Badge className={`${issueInfo.badgeColor} ml-2`}>
-                                 {count} página{count !== 1 ? 's' : ''}
-                               </Badge>
-                             </div>
-                             <p className="text-gray-700 text-sm mt-1">
-                               {issueInfo.description}
-                             </p>
-                           </div>
-                         </div>
-                       </AccordionTrigger>
-                       <AccordionContent className="px-4 pb-3">
-                         <div className="space-y-3">
-                           <div className="bg-white/70 rounded-md p-3">
-                             <p className="text-xs text-gray-600">
-                               <strong>¿Por qué es importante?</strong> {issueInfo.explanation}
-                             </p>
-                           </div>
-                           
-                           {pages.length > 0 ? (
-                             <div className="bg-white/50 rounded-md p-3">
-                               <h4 className="font-medium text-gray-800 mb-2">
-                                 Páginas afectadas ({pages.length}):
-                               </h4>
-                               <div className="space-y-1 max-h-40 overflow-y-auto">
-                                 {pages.map((url, index) => (
-                                   <div key={index} className="flex items-center gap-2 text-sm">
-                                     <span className="text-gray-500">•</span>
-                                     <a
-                                       href={url}
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       className="text-blue-600 hover:text-blue-800 hover:underline truncate"
-                                       title={url}
-                                     >
-                                       {url}
-                                     </a>
-                                   </div>
-                                 ))}
-                               </div>
-                             </div>
-                           ) : isExpanded ? (
-                             <div className="bg-white/50 rounded-md p-3">
-                               <p className="text-sm text-gray-600">
-                                 Cargando páginas específicas...
-                               </p>
-                             </div>
-                           ) : (
-                             <div className="bg-white/50 rounded-md p-3">
-                               <p className="text-sm text-gray-600">
-                                 Haz clic en la flecha para ver las páginas específicas
-                               </p>
-                             </div>
-                           )}
-                         </div>
-                       </AccordionContent>
-                     </AccordionItem>
-                   );
-                 })}
-             </Accordion>
-           </CardContent>
-         </Card>
-       )}
+                  return (
+                    <AccordionItem
+                      key={checkType}
+                      value={checkType}
+                      className={`rounded-lg border ${issueInfo.type === 'good' ? 'border-green-200 bg-green-50' :
+                        issueInfo.type === 'improvement' ? 'border-yellow-200 bg-yellow-50' :
+                          issueInfo.type === 'problem' ? 'border-red-200 bg-red-50' :
+                            'border-gray-200 bg-gray-50'
+                        }`}
+                    >
+                      <AccordionTrigger
+                        className="px-4 py-3 hover:no-underline"
+                        onClick={() => handleAccordionChange(checkType, !isExpanded)}
+                      >
+                        <div className="flex items-center gap-3 flex-1">
+                          <IconComponent className={`size-5 ${issueInfo.color} flex-shrink-0`} />
+                          <div className="flex-1 text-left">
+                            <div className="flex items-center justify-between">
+                              <h3 className="font-semibold text-gray-900">
+                                {issueInfo.title}
+                              </h3>
+                              <Badge className={`${issueInfo.badgeColor} ml-2`}>
+                                {count} página{count !== 1 ? 's' : ''}
+                              </Badge>
+                            </div>
+                            <p className="text-gray-700 text-sm mt-1">
+                              {issueInfo.description}
+                            </p>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4 pb-3">
+                        <div className="space-y-3">
+                          <div className="bg-white/70 rounded-md p-3">
+                            <p className="text-xs text-gray-600">
+                              <strong>¿Por qué es importante?</strong> {issueInfo.explanation}
+                            </p>
+                          </div>
+
+                          {pages.length > 0 ? (
+                            <div className="bg-white/50 rounded-md p-3">
+                              <h4 className="font-medium text-gray-800 mb-2">
+                                Páginas afectadas ({pages.length}):
+                              </h4>
+                              <div className="space-y-1 max-h-40 overflow-y-auto">
+                                {pages.map((url, index) => (
+                                  <div key={index} className="flex items-center gap-2 text-sm">
+                                    <span className="text-gray-500">•</span>
+                                    <a
+                                      href={url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-blue-600 hover:text-blue-800 hover:underline truncate"
+                                      title={url}
+                                    >
+                                      {url}
+                                    </a>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ) : isExpanded ? (
+                            <div className="bg-white/50 rounded-md p-3">
+                              <p className="text-sm text-gray-600">
+                                Cargando páginas específicas...
+                              </p>
+                            </div>
+                          ) : (
+                            <div className="bg-white/50 rounded-md p-3">
+                              <p className="text-sm text-gray-600">
+                                Haz clic en la flecha para ver las páginas específicas
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+            </Accordion>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Información del Dominio */}
       {summary.domain_info && (

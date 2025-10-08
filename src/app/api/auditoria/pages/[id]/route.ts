@@ -37,14 +37,14 @@ export async function GET(
 
     // Obtener las páginas con el problema específico
     const onPageService = getOnPageService();
-    
+
     // Por ahora, simulamos las páginas basándonos en el dominio
     // En una implementación real, haríamos una llamada específica a DataForSEO
     // para obtener las páginas que tienen el problema específico
-    
+
     const summary = await onPageService.getSummary(id);
     const domain = summary.domain_info?.name || '';
-    
+
     // Simulamos las páginas afectadas basándonos en el tipo de problema
     const mockPages = generateMockPages(domain, checkType);
 
@@ -74,7 +74,7 @@ export async function GET(
  */
 function generateMockPages(domain: string, checkType: string): string[] {
   const baseUrl = `https://${domain}`;
-  
+
   // Páginas comunes que podrían tener problemas
   const commonPages = [
     '',
