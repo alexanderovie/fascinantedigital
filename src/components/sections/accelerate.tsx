@@ -154,6 +154,7 @@ const TimelineItem = ({
                 width={400}
                 height={500}
                 alt={image.alt}
+                sizes="(max-width: 768px) 300px, 400px"
                 className="m-2 rounded-md object-contain shadow-md lg:rounded-xl lg:shadow-lg dark:invert"
               />
               <DiagonalPattern className="w-6 lg:w-10" />

@@ -50,6 +50,7 @@ const AdaptiveList = () => {
                 alt={item.title}
                 width={416}
                 height={233}
+                sizes="(max-width: 768px) 300px, 416px"
                 className="rounded-md shadow-md lg:rounded-xl lg:shadow-lg dark:invert"
               />
             </div>
