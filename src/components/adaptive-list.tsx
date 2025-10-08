@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const DATA = [
   {
-    subTitle: 'Palabras que venden',
+    subTitle: 'Análisis de keywords',
     title: 'Palabras que venden',
     description:
       'Te mostramos qué buscan tus clientes y qué oportunidades estás dejando pasar.',
@@ -10,7 +10,7 @@ const DATA = [
     image: '/images/homepage/adaptive-1.png',
   },
   {
-    subTitle: 'Competencia bajo la lupa',
+    subTitle: 'Inteligencia competitiva',
     title: 'Competencia bajo la lupa',
     description:
       'Analizamos cómo se están moviendo tus competidores y diseñamos estrategias para que los superes.',
@@ -18,7 +18,7 @@ const DATA = [
     image: '/images/homepage/adaptive-2.png',
   },
   {
-    subTitle: 'Estrategias efectivas',
+    subTitle: 'Marketing basado en datos',
     title: 'Estrategias efectivas',
     description:
       'Campañas diseñadas con base en datos reales de búsqueda para conectar con tus clientes ideales.',
