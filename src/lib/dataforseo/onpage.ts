@@ -249,11 +249,13 @@ export class OnPageService {
    */
   async getKeywordDensity(
     taskId: string,
+    url: string,
     keywordLength: number = 2,
   ): Promise<any[]> {
     const requestData = [
       {
         id: taskId,
+        url: url,
         keyword_length: keywordLength,
       },
     ];
@@ -286,9 +288,10 @@ export class OnPageService {
   /**
    * Obtener análisis de contenido (parsing)
    */
-  async getContentParsing(taskId: string): Promise<any> {
+  async getContentParsing(taskId: string, url: string): Promise<any> {
     const requestData = [
       {
+        url: url,
         id: taskId,
       },
     ];

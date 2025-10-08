@@ -248,13 +248,18 @@ const AuditResultsDashboard = ({
     if (!isComplete || loadingData) return;
 
     setLoadingData(true);
+    const targetUrl = summary.domain_info?.name || '';
 
     try {
       // Cargar todos los datos en paralelo
       const [contentRes, keywordsRes, resourcesRes, linksRes] =
         await Promise.allSettled([
-          fetch(`/api/auditoria/content/${taskId}`),
-          fetch(`/api/auditoria/keywords/${taskId}`),
+          fetch(
+            `/api/auditoria/content/${taskId}?url=${encodeURIComponent(targetUrl)}`,
+          ),
+          fetch(
+            `/api/auditoria/keywords/${taskId}?url=${encodeURIComponent(targetUrl)}`,
+          ),
           fetch(`/api/auditoria/resources/${taskId}`),
           fetch(`/api/auditoria/links/${taskId}`),
         ]);
