@@ -14,8 +14,8 @@ export default function Hero() {
         <BorderedSection className="2xl:flex-1">
           <DiagonalPattern />
         </BorderedSection>
-        <div className="container mx-auto pt-16 pb-12 text-center md:pt-20 lg:pt-28 bg-red-100">
-          <h1 className="mx-auto max-w-[600px] text-[2.5rem] leading-[1.2] tracking-[-1.6px] text-balance md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
+        <div className="container mx-auto pt-16 pb-12 text-center md:pt-20 lg:pt-28">
+          <h1 className="mx-auto max-w-[800px] text-[2.5rem] leading-[1.2] tracking-[-1.6px] text-balance md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
             Consigue Más Clientes Todos los Días
           </h1>
           <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
