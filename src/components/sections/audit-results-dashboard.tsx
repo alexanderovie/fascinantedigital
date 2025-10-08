@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import {
   AlertCircle,
   AlertTriangle,
+  BarChart3,
   CheckCircle2,
   Clock,
   Info,
@@ -19,6 +20,7 @@ import {
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import TitleTag from '@/components/title-tag';
 import type { OnPageSummaryResult } from '@/types/dataforseo';
 
 interface AuditResultsDashboardProps {
@@ -262,13 +264,16 @@ const AuditResultsDashboard = ({
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">Resultados de tu Auditoría SEO</h1>
-        <p className="text-muted-foreground mt-2">
-          Análisis de:{' '}
-          <strong>{summary.domain_info?.name || 'Tu sitio'}</strong>
+      <div className="container flex flex-col gap-6 border-x py-4 max-lg:border-x lg:py-8 !max-w-[480px] !border-none lg:items-center lg:text-center">
+        <TitleTag title="AUDITORÍA" icon={BarChart3} />
+        <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl">
+          Resultados de tu Auditoría SEO
+        </h2>
+        <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
+          Análisis de: <strong>{summary.domain_info?.name || 'Tu sitio'}</strong>
+          <br />
+          <span className="text-sm">Task ID: {taskId}</span>
         </p>
-        <p className="text-muted-foreground text-sm">Task ID: {taskId}</p>
       </div>
 
       {/* Estado */}
