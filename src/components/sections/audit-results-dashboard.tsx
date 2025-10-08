@@ -12,6 +12,7 @@ import {
   ChevronRight,
   Clock,
   Info,
+  Loader2,
   TrendingUp,
 } from 'lucide-react';
 
@@ -285,7 +286,7 @@ const AuditResultsDashboard = ({
       {!isComplete && (
         <Card className="border-yellow-200 bg-yellow-50">
           <CardContent className="flex items-center gap-3 pt-6">
-            <Clock className="size-5 text-yellow-600" />
+            <Loader2 className="size-6 animate-spin text-yellow-600" />
             <div>
               <p className="font-medium text-yellow-900">
                 Auditoría en proceso...
