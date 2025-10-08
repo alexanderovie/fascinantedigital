@@ -100,9 +100,9 @@ export class EmailService {
             </div>
             <div class="content">
               <p>Hola <strong>${name}</strong>,</p>
-              
+
               <p>¡Excelente noticia! Hemos comenzado el análisis completo de tu sitio web.</p>
-              
+
               <div class="info-box">
                 <h3 style="margin-top: 0;">📊 Detalles de tu Auditoría</h3>
                 <p><strong>Sitio web:</strong> ${website}</p>
@@ -132,7 +132,7 @@ export class EmailService {
                 <p style="margin: 0;"><strong>💡 Consejo:</strong> Mientras esperas, asegúrate de tener acceso a Google Search Console y Google Analytics para poder implementar nuestras recomendaciones.</p>
               </div>
             </div>
-            
+
             <div class="footer">
               <p>Fascinante Digital - Datos reales de Google. Estrategias que dominan.</p>
               <p>2054 Vista Pkwy #400, West Palm Beach, FL 33411</p>
@@ -198,7 +198,7 @@ export class EmailService {
             </div>
             <div class="content">
               <p>Hola <strong>${name}</strong>,</p>
-              
+
               <p>¡Hemos terminado el análisis completo de <strong>${website}</strong>!</p>
 
               <div class="score-circle">
@@ -243,7 +243,7 @@ export class EmailService {
                 <p style="margin-bottom: 0;">Nuestro equipo puede implementar todas estas mejoras por ti. <a href="https://fascinantedigital.com/contact">Agenda una consulta gratuita</a>.</p>
               </div>
             </div>
-            
+
             <div class="footer">
               <p>Fascinante Digital - Datos reales de Google. Estrategias que dominan.</p>
               <p>2054 Vista Pkwy #400, West Palm Beach, FL 33411</p>
@@ -268,4 +268,3 @@ export class EmailService {
 export function getEmailService(): EmailService {
   return new EmailService();
 }
-

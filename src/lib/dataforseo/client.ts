@@ -11,7 +11,7 @@ export class DataForSEOClient {
 
   private constructor() {
     this.baseURL = process.env.DATAFORSEO_API_URL || 'https://api.dataforseo.com';
-    
+
     // Usar el token pre-codificado si está disponible
     if (process.env.DATAFORSEO_AUTH_BASE64) {
       this.authHeader = `Basic ${process.env.DATAFORSEO_AUTH_BASE64}`;
@@ -19,7 +19,7 @@ export class DataForSEOClient {
       // Fallback: codificar las credenciales
       const username = process.env.DATAFORSEO_USERNAME;
       const password = process.env.DATAFORSEO_PASSWORD;
-      
+
       if (!username || !password) {
         throw new Error(
           'DataForSEO credentials not found. Please set DATAFORSEO_USERNAME and DATAFORSEO_PASSWORD environment variables.'
@@ -168,4 +168,3 @@ export class DataForSEOClient {
 export function getDataForSEOClient(): DataForSEOClient {
   return DataForSEOClient.getInstance();
 }
-
