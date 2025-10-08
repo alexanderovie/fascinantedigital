@@ -25,7 +25,25 @@ const AuditResultsPage = async ({ params }: PageProps) => {
   try {
     // Obtener los resultados de la auditoría
     const onPageService = getOnPageService();
-    const summary = await onPageService.getSummary(id);
+
+    // Intentar obtener el resumen
+    let summary;
+    try {
+      summary = await onPageService.getSummary(id);
+    } catch (_error) {
+      // Si no hay resultados aún, crear un objeto temporal con datos iniciales
+      console.log('Task is initializing, showing loading state...');
+      summary = {
+        crawl_progress: 'in_progress',
+        crawl_status: {
+          max_crawl_pages: 1,
+          pages_in_queue: 1,
+          pages_crawled: 0,
+        },
+        domain_info: null,
+        page_metrics: null,
+      } as any; // Temporal hasta que DataForSEO devuelva datos reales
+    }
 
     // Verificar si la auditoría está completa
     const isComplete = summary.crawl_progress === 'finished';
