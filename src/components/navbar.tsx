@@ -71,7 +71,7 @@ const Navbar = () => {
               alt="Fascinante Digital Logo"
               width={180}
               height={40}
-              className="h-auto w-[100px] lg:w-[140px]"
+              className="h-auto w-[120px] lg:w-[140px]"
             />
           </Link>
 
