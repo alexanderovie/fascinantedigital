@@ -62,6 +62,8 @@ export default function Hero() {
             className="mx-auto rounded-xl border object-contain p-1 shadow-lg 2xl:max-w-[1092px] dark:invert"
             width={1000}
             height={600}
+            priority
+            fetchPriority="high"
           />
         </div>
         <BorderedSection className="border-r-0 border-l 2xl:flex-1" />
