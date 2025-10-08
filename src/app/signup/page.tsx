@@ -4,7 +4,8 @@ import SignupSection from '@/components/sections/signup-section';
 
 export const metadata: Metadata = {
   title: 'Registrarse',
-  description: 'Crea tu cuenta en Fascinante Digital y comienza a impulsar tu negocio.',
+  description:
+    'Crea tu cuenta en Fascinante Digital y comienza a impulsar tu negocio.',
   alternates: {
     canonical: '/signup',
   },
