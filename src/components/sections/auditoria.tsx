@@ -4,7 +4,12 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import { Building, ChevronRight, LucideIcon, Mail, Phone, Search, Target, TrendingUp } from 'lucide-react';
+import {
+  LucideIcon,
+  Search,
+  Target,
+  TrendingUp,
+} from 'lucide-react';
 
 import SectionHeader from '../section-header';
 
@@ -102,7 +107,7 @@ const Auditoria = () => {
             <div key={field.id} className="space-y-2">
               <Label className="text-sm font-normal" htmlFor={field.id}>
                 {field.label}
-                {field.required && <span className="text-red-500 ml-1">*</span>}
+                {field.required && <span className="ml-1 text-red-500">*</span>}
               </Label>
               <field.component
                 id={field.id}
