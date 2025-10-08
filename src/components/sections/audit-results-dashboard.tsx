@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
+import Link from 'next/link';
 
 import {
   AlertCircle,
@@ -259,21 +260,22 @@ const AuditResultsDashboard = ({
 
   const totalIssues = summary.page_metrics?.checks
     ? Object.values(summary.page_metrics.checks).reduce(
-      (sum, count) => sum + count,
-      0,
-    )
+        (sum, count) => sum + count,
+        0,
+      )
     : 0;
 
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="container flex flex-col gap-6 border-x py-4 max-lg:border-x lg:py-8 !max-w-[480px] !border-none lg:items-center lg:text-center">
+      <div className="container flex !max-w-[480px] flex-col gap-6 border-x !border-none py-4 max-lg:border-x lg:items-center lg:py-8 lg:text-center">
         <TitleTag title="Auditoría" icon={BarChart3} />
         <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl">
           Resultados de tu Auditoría SEO
         </h2>
         <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
-          Análisis de: <strong>{summary.domain_info?.name || 'Tu sitio'}</strong>
+          Análisis de:{' '}
+          <strong>{summary.domain_info?.name || 'Tu sitio'}</strong>
           <br />
           <span className="text-sm">Task ID: {taskId}</span>
         </p>
@@ -338,7 +340,7 @@ const AuditResultsDashboard = ({
                 Basado en el análisis de{' '}
                 {summary.page_metrics
                   ? summary.page_metrics.links_internal +
-                  summary.page_metrics.links_external
+                    summary.page_metrics.links_external
                   : 0}{' '}
                 elementos
               </p>
@@ -502,14 +504,15 @@ const AuditResultsDashboard = ({
                       <AccordionItem
                         key={checkType}
                         value={checkType}
-                        className={`rounded-lg border ${issueInfo.type === 'good'
+                        className={`rounded-lg border ${
+                          issueInfo.type === 'good'
                             ? 'border-green-200 bg-green-50'
                             : issueInfo.type === 'improvement'
                               ? 'border-yellow-200 bg-yellow-50'
                               : issueInfo.type === 'problem'
                                 ? 'border-red-200 bg-red-50'
                                 : 'border-gray-200 bg-gray-50'
-                          }`}
+                        }`}
                       >
                         <AccordionTrigger
                           className="px-4 py-3 hover:no-underline"
@@ -636,23 +639,23 @@ const AuditResultsDashboard = ({
               )}
               {summary.domain_info.ssl_info?.valid_certificate !==
                 undefined && (
-                  <div>
-                    <p className="text-sm font-medium">Certificado SSL</p>
-                    <div className="flex items-center gap-2">
-                      {summary.domain_info.ssl_info.valid_certificate ? (
-                        <>
-                          <CheckCircle2 className="size-4 text-green-600" />
-                          <span className="text-green-600">Válido</span>
-                        </>
-                      ) : (
-                        <>
-                          <AlertCircle className="size-4 text-red-600" />
-                          <span className="text-red-600">Inválido</span>
-                        </>
-                      )}
-                    </div>
+                <div>
+                  <p className="text-sm font-medium">Certificado SSL</p>
+                  <div className="flex items-center gap-2">
+                    {summary.domain_info.ssl_info.valid_certificate ? (
+                      <>
+                        <CheckCircle2 className="size-4 text-green-600" />
+                        <span className="text-green-600">Válido</span>
+                      </>
+                    ) : (
+                      <>
+                        <AlertCircle className="size-4 text-red-600" />
+                        <span className="text-red-600">Inválido</span>
+                      </>
+                    )}
                   </div>
-                )}
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>
