@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
       { url: '/icon.png', type: 'image/png' },
+      { url: '/icon-96x96.png', sizes: '96x96', type: 'image/png' },
       { url: '/favicon.ico' },
     ],
     apple: [{ url: '/apple-icon.png' }],
