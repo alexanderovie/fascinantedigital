@@ -80,5 +80,4 @@ const Auditoria = () => {
   );
 };
 
-
 export default Auditoria;
