@@ -14,44 +14,44 @@ import SectionHeader from '../section-header';
 
 const TIMELINE_ITEMS = [
   {
-    title: 'Qué páginas atraen más',
+    title: 'Auditoría inteligente',
     description:
-      'Descubre qué partes de tu sitio generan más contactos y cómo puedes mejorarlas.',
+      'Analizamos tu sitio, redes y visibilidad local para detectar los puntos que limitan tu crecimiento.',
     icon: LayoutList,
     image: {
       src: '/images/homepage/accelerate-1.png',
-      alt: 'Qué páginas atraen más',
+      alt: 'Auditoría inteligente',
     },
   },
   {
-    title: 'Aprende del mejor',
+    title: 'Descubre tus oportunidades ocultas',
     description:
-      'Compara tus resultados con los líderes de tu sector y aplica sus mejores estrategias.',
+      'Identificamos palabras clave, ubicaciones y canales donde tu negocio podría aparecer y aún no lo hace.',
     icon: LocateFixed,
     image: {
       src: '/images/homepage/accelerate-2.png',
-      alt: 'Aprende del mejor',
+      alt: 'Descubre tus oportunidades ocultas',
     },
     reverse: true,
   },
   {
-    title: 'Seguimiento continuo',
+    title: 'Mejoras que generan impacto',
     description:
-      'Monitorea tu progreso mes a mes con reportes claros que muestran tu evolución y próximos pasos.',
+      'Te entregamos un plan claro con los ajustes que harán que tu negocio sea más visible y confiable.',
     icon: Users,
     image: {
       src: '/images/homepage/accelerate-3.png',
-      alt: 'Seguimiento continuo',
+      alt: 'Mejoras que generan impacto',
     },
   },
   {
-    title: 'Tecnología profesional',
+    title: 'Crecimiento medido y real',
     description:
-      'Accede a herramientas de análisis que otras agencias cobran cientos de dólares al mes.',
+      'Monitoreamos tu avance y ajustamos tus estrategias con base en datos reales, no suposiciones.',
     icon: Cpu,
     image: {
       src: '/images/homepage/accelerate-4.png',
-      alt: 'Tecnología profesional',
+      alt: 'Crecimiento medido y real',
     },
     reverse: true,
   },
@@ -63,10 +63,10 @@ const Accelerate = () => {
       <div className="border-b">
         <SectionHeader
           iconTitle="Planifica"
-          title="Diseña tu crecimiento con claridad"
+          title="Descubre lo que realmente pasa con tu presencia digital"
           icon={Rocket}
           description={
-            'Toma decisiones seguras con reportes reales y asesoría personalizada. Nosotros medimos, analizamos y ajustamos contigo cada paso del camino.'
+            'Te mostramos lo que funciona, lo que falla y cómo aprovechar cada oportunidad.'
           }
         />
       </div>
