@@ -44,9 +44,10 @@ export async function GET(
       },
       summary: isComplete
         ? {
-            score: summary.on_page_score || 0,
-            totalPages: summary.items_count || 0,
-            checks: summary.checks || {},
+            score: summary.page_metrics?.onpage_score || 0,
+            totalPages: summary.page_metrics ? 
+              (summary.page_metrics.links_internal + summary.page_metrics.links_external) : 0,
+            checks: summary.page_metrics?.checks || {},
             domain: summary.domain_info?.name || '',
           }
         : null,
