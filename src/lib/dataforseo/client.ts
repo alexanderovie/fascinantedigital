@@ -10,7 +10,8 @@ export class DataForSEOClient {
   private authHeader: string;
 
   private constructor() {
-    this.baseURL = process.env.DATAFORSEO_API_URL || 'https://api.dataforseo.com';
+    this.baseURL =
+      process.env.DATAFORSEO_API_URL || 'https://api.dataforseo.com';
 
     // Usar el token pre-codificado si está disponible
     if (process.env.DATAFORSEO_AUTH_BASE64) {
@@ -22,7 +23,7 @@ export class DataForSEOClient {
 
       if (!username || !password) {
         throw new Error(
-          'DataForSEO credentials not found. Please set DATAFORSEO_USERNAME and DATAFORSEO_PASSWORD environment variables.'
+          'DataForSEO credentials not found. Please set DATAFORSEO_USERNAME and DATAFORSEO_PASSWORD environment variables.',
         );
       }
 
@@ -50,7 +51,7 @@ export class DataForSEOClient {
     options?: {
       maxRetries?: number;
       retryDelay?: number;
-    }
+    },
   ): Promise<DataForSEOResponse<T>> {
     const { maxRetries = 3, retryDelay = 1000 } = options || {};
     const url = `${this.baseURL}${endpoint}`;
@@ -68,7 +69,7 @@ export class DataForSEOClient {
 
         if (!response.ok) {
           throw new Error(
-            `DataForSEO API error: ${response.status} ${response.statusText}`
+            `DataForSEO API error: ${response.status} ${response.statusText}`,
           );
         }
 
@@ -77,7 +78,7 @@ export class DataForSEOClient {
         // Verificar si la respuesta tiene errores
         if (result.status_code !== 20000) {
           throw new Error(
-            `DataForSEO API error: ${result.status_message} (code: ${result.status_code})`
+            `DataForSEO API error: ${result.status_message} (code: ${result.status_code})`,
           );
         }
 
@@ -93,7 +94,7 @@ export class DataForSEOClient {
         // Exponential backoff
         const delay = retryDelay * Math.pow(2, attempt - 1);
         console.warn(
-          `DataForSEO API request failed (attempt ${attempt}/${maxRetries}). Retrying in ${delay}ms...`
+          `DataForSEO API request failed (attempt ${attempt}/${maxRetries}). Retrying in ${delay}ms...`,
         );
         await this.sleep(delay);
       }
@@ -119,7 +120,7 @@ export class DataForSEOClient {
 
       if (!response.ok) {
         throw new Error(
-          `DataForSEO API error: ${response.status} ${response.statusText}`
+          `DataForSEO API error: ${response.status} ${response.statusText}`,
         );
       }
 
@@ -127,7 +128,7 @@ export class DataForSEOClient {
 
       if (result.status_code !== 20000) {
         throw new Error(
-          `DataForSEO API error: ${result.status_message} (code: ${result.status_code})`
+          `DataForSEO API error: ${result.status_message} (code: ${result.status_code})`,
         );
       }
 

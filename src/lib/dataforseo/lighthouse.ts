@@ -1,4 +1,5 @@
 import { getDataForSEOClient } from './client';
+
 import type {
   LighthouseTaskPostRequest,
   LighthouseResult,
@@ -20,7 +21,7 @@ export class LighthouseService {
       languageCode?: string;
       pingbackUrl?: string;
       tag?: string;
-    }
+    },
   ): Promise<string> {
     const {
       forMobile = true,
@@ -41,7 +42,7 @@ export class LighthouseService {
 
     const response = await this.client.request(
       '/v3/on_page/lighthouse/task_post',
-      taskData
+      taskData,
     );
 
     if (!response.tasks?.[0]?.result?.[0]?.id) {
@@ -56,7 +57,7 @@ export class LighthouseService {
    */
   async getResults(taskId: string): Promise<LighthouseResult> {
     const response = await this.client.get<LighthouseResult>(
-      `/v3/on_page/lighthouse/task_get/json/${taskId}`
+      `/v3/on_page/lighthouse/task_get/json/${taskId}`,
     );
 
     if (!response.tasks?.[0]?.result?.[0]) {
@@ -71,7 +72,7 @@ export class LighthouseService {
    */
   async runLiveAnalysis(
     url: string,
-    forMobile: boolean = true
+    forMobile: boolean = true,
   ): Promise<LighthouseResult> {
     const taskData: LighthouseTaskPostRequest[] = [
       {
@@ -83,12 +84,12 @@ export class LighthouseService {
 
     const response = await this.client.request<LighthouseResult>(
       '/v3/on_page/lighthouse/live/json',
-      taskData
+      taskData,
     );
 
     if (!response.tasks?.[0]?.result?.[0]) {
       throw new Error(
-        'Failed to run live Lighthouse analysis: No result returned'
+        'Failed to run live Lighthouse analysis: No result returned',
       );
     }
 
@@ -106,7 +107,7 @@ export class LighthouseService {
         performance: Math.round((categories.performance?.score || 0) * 100),
         accessibility: Math.round((categories.accessibility?.score || 0) * 100),
         bestPractices: Math.round(
-          (categories['best-practices']?.score || 0) * 100
+          (categories['best-practices']?.score || 0) * 100,
         ),
         seo: Math.round((categories.seo?.score || 0) * 100),
       },
@@ -123,7 +124,7 @@ export class LighthouseService {
           ([_, audit]) =>
             audit.scoreDisplayMode === 'numeric' &&
             audit.score !== null &&
-            audit.score < 0.9
+            audit.score < 0.9,
         )
         .map(([id, audit]) => ({
           id,
@@ -143,4 +144,3 @@ export class LighthouseService {
 export function getLighthouseService(): LighthouseService {
   return new LighthouseService();
 }
-

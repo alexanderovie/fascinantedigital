@@ -22,12 +22,11 @@ export class EmailService {
 
   constructor() {
     this.apiKey = process.env.RESEND_API_KEY || '';
-    this.fromEmail =
-      process.env.FROM_EMAIL || 'noreply@fascinantedigital.com';
+    this.fromEmail = process.env.FROM_EMAIL || 'noreply@fascinantedigital.com';
 
     if (!this.apiKey) {
       console.warn(
-        'RESEND_API_KEY not found. Email notifications will not work.'
+        'RESEND_API_KEY not found. Email notifications will not work.',
       );
     }
   }
@@ -165,12 +164,16 @@ export class EmailService {
         warnings: number;
         opportunities: number;
       };
-    }
+    },
   ): Promise<boolean> {
     const { name, website, resultsUrl, summary } = data;
 
     const scoreColor =
-      summary.score >= 80 ? '#10b981' : summary.score >= 50 ? '#f59e0b' : '#ef4444';
+      summary.score >= 80
+        ? '#10b981'
+        : summary.score >= 50
+          ? '#f59e0b'
+          : '#ef4444';
 
     const html = `
       <!DOCTYPE html>

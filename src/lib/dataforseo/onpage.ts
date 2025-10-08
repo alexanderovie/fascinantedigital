@@ -1,4 +1,5 @@
 import { getDataForSEOClient } from './client';
+
 import type {
   OnPageTaskPostRequest,
   OnPageTaskPostResult,
@@ -23,9 +24,14 @@ export class OnPageService {
       enableJavaScript?: boolean;
       pingbackUrl?: string;
       tag?: string;
-    }
+    },
   ): Promise<string> {
-    const { maxPages = 100, enableJavaScript = true, pingbackUrl, tag } = options || {};
+    const {
+      maxPages = 100,
+      enableJavaScript = true,
+      pingbackUrl,
+      tag,
+    } = options || {};
 
     const taskData: OnPageTaskPostRequest[] = [
       {
@@ -41,7 +47,7 @@ export class OnPageService {
 
     const response = await this.client.request<OnPageTaskPostResult>(
       '/v3/on_page/task_post',
-      taskData
+      taskData,
     );
 
     if (!response.tasks?.[0]?.result?.[0]?.id) {
@@ -56,7 +62,7 @@ export class OnPageService {
    */
   async getSummary(taskId: string): Promise<OnPageSummaryResult> {
     const response = await this.client.get<OnPageSummaryResult>(
-      `/v3/on_page/summary/${taskId}`
+      `/v3/on_page/summary/${taskId}`,
     );
 
     if (!response.tasks?.[0]?.result?.[0]) {
@@ -75,7 +81,7 @@ export class OnPageService {
       limit?: number;
       offset?: number;
       filters?: any[];
-    }
+    },
   ): Promise<OnPagePageResult[]> {
     const { limit = 100, offset = 0, filters = [] } = options || {};
 
@@ -90,7 +96,7 @@ export class OnPageService {
 
     const response = await this.client.request<OnPagePageResult>(
       '/v3/on_page/pages',
-      requestData
+      requestData,
     );
 
     return response.tasks?.[0]?.result || [];
@@ -109,7 +115,7 @@ export class OnPageService {
 
     const response = await this.client.request(
       '/v3/on_page/errors',
-      requestData
+      requestData,
     );
 
     return response.tasks?.[0]?.result || [];
@@ -128,7 +134,7 @@ export class OnPageService {
 
     const response = await this.client.request(
       '/v3/on_page/duplicate_content',
-      requestData
+      requestData,
     );
 
     return response.tasks?.[0]?.result || [];
@@ -139,7 +145,7 @@ export class OnPageService {
    */
   async getDuplicateTags(
     taskId: string,
-    type: 'duplicate_title' | 'duplicate_description' | 'duplicate_h1'
+    type: 'duplicate_title' | 'duplicate_description' | 'duplicate_h1',
   ): Promise<any[]> {
     const requestData = [
       {
@@ -151,7 +157,7 @@ export class OnPageService {
 
     const response = await this.client.request(
       '/v3/on_page/duplicate_tags',
-      requestData
+      requestData,
     );
 
     return response.tasks?.[0]?.result || [];
@@ -178,7 +184,7 @@ export class OnPageService {
     options?: {
       maxWaitTime?: number; // en milisegundos
       checkInterval?: number; // en milisegundos
-    }
+    },
   ): Promise<OnPageSummaryResult> {
     const { maxWaitTime = 300000, checkInterval = 5000 } = options || {}; // 5 min max
     const startTime = Date.now();
@@ -203,4 +209,3 @@ export class OnPageService {
 export function getOnPageService(): OnPageService {
   return new OnPageService();
 }
-

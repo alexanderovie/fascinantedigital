@@ -22,19 +22,16 @@ export const auditoriaFormSchema = z.object({
     .url('Por favor ingresa una URL válida')
     .refine(
       (url) => url.startsWith('http://') || url.startsWith('https://'),
-      'La URL debe comenzar con http:// o https://'
+      'La URL debe comenzar con http:// o https://',
     )
-    .refine(
-      (url) => {
-        try {
-          const parsedUrl = new URL(url);
-          return parsedUrl.hostname.includes('.');
-        } catch {
-          return false;
-        }
-      },
-      'La URL no parece ser válida'
-    )
+    .refine((url) => {
+      try {
+        const parsedUrl = new URL(url);
+        return parsedUrl.hostname.includes('.');
+      } catch {
+        return false;
+      }
+    }, 'La URL no parece ser válida')
     .transform((url) => url.toLowerCase().trim()),
 
   // Tipo de negocio
@@ -90,4 +87,3 @@ export const webhookPayloadSchema = z.object({
 });
 
 export type WebhookPayload = z.infer<typeof webhookPayloadSchema>;
-

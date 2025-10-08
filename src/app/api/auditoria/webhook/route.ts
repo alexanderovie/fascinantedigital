@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { webhookPayloadSchema } from '@/schemas/auditoria';
-import { getEmailService } from '@/lib/email/resend';
+
 import { getOnPageService } from '@/lib/dataforseo/onpage';
+import { getEmailService } from '@/lib/email/resend';
+import { webhookPayloadSchema } from '@/schemas/auditoria';
 
 /**
  * POST /api/auditoria/webhook
@@ -18,22 +19,21 @@ export async function POST(request: NextRequest) {
 
     // 3. Verificar que la tarea se completó exitosamente
     if (validatedPayload.status_code !== 20000) {
-      console.error(
-        'Task failed:',
-        validatedPayload.status_message
-      );
+      console.error('Task failed:', validatedPayload.status_message);
       return NextResponse.json(
         {
           success: false,
           message: 'Task failed',
         },
-        { status: 200 } // Retornamos 200 para que DataForSEO no reintente
+        { status: 200 }, // Retornamos 200 para que DataForSEO no reintente
       );
     }
 
     // 4. Extraer información del tag (contiene el email del usuario)
     const tag = validatedPayload.tag || '';
-    const emailMatch = tag.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/);
+    const emailMatch = tag.match(
+      /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/,
+    );
     const userEmail = emailMatch ? emailMatch[1] : null;
 
     if (!userEmail) {
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
           success: false,
           message: 'No email found',
         },
-        { status: 200 }
+        { status: 200 },
       );
     }
 
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     // 6. Calcular métricas simplificadas
     const totalIssues = Object.values(summary.checks || {}).reduce(
       (sum, count) => sum + count,
-      0
+      0,
     );
     const criticalIssues = summary.checks?.['broken_links'] || 0;
     const warnings = summary.checks?.['duplicate_title'] || 0;
@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
         success: true,
         message: 'Webhook processed successfully',
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error('Error processing webhook:', error);
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
         message: 'Error processing webhook',
         error: error instanceof Error ? error.message : 'Unknown error',
       },
-      { status: 200 }
+      { status: 200 },
     );
   }
 }

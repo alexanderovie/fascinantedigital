@@ -278,4 +278,3 @@ export interface BusinessInfo {
   businessType: 'local' | 'ecommerce' | 'corporate' | 'blog';
   location?: string;
 }
-

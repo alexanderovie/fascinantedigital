@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 
+import Link from 'next/link';
+
+import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertCircle, CheckCircle2, Loader2, Search } from 'lucide-react';
+import { useForm } from 'react-hook-form';
 
 import SectionHeader from '../section-header';
 
@@ -101,7 +102,10 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
 
       <div className={withBorders ? 'container border-x' : 'container'}>
         <div className="mx-auto max-w-3xl pt-8 pb-4 md:pb-8 lg:pt-[3.75rem] lg:pb-[50px]">
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-6"
+          >
             {/* Nombre */}
             <div className="space-y-2">
               <Label className="text-sm font-normal" htmlFor="name">
@@ -160,13 +164,17 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
               </Label>
               <select
                 id="businessType"
-                className="border-border bg-card flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="border-border bg-card ring-offset-background focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                 {...register('businessType')}
               >
                 <option value="">Selecciona una opción</option>
-                <option value="local">Negocio Local (restaurante, tienda física, etc.)</option>
+                <option value="local">
+                  Negocio Local (restaurante, tienda física, etc.)
+                </option>
                 <option value="ecommerce">E-commerce (tienda online)</option>
-                <option value="corporate">Corporativo (empresa, servicios B2B)</option>
+                <option value="corporate">
+                  Corporativo (empresa, servicios B2B)
+                </option>
                 <option value="blog">Blog / Contenido</option>
               </select>
               {errors.businessType && (
@@ -188,11 +196,13 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
                 className="border-border bg-card"
                 {...register('location')}
               />
-              <p className="text-xs text-muted-foreground">
+              <p className="text-muted-foreground text-xs">
                 Importante para negocios locales
               </p>
               {errors.location && (
-                <p className="text-sm text-red-500">{errors.location.message}</p>
+                <p className="text-sm text-red-500">
+                  {errors.location.message}
+                </p>
               )}
             </div>
 
@@ -236,7 +246,9 @@ const Auditoria = ({ withBorders = true }: { withBorders?: boolean }) => {
               </div>
             </div>
             {errors.acceptTerms && (
-              <p className="text-sm text-red-500">{errors.acceptTerms.message}</p>
+              <p className="text-sm text-red-500">
+                {errors.acceptTerms.message}
+              </p>
             )}
 
             {/* Status Messages */}

@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { auditoriaFormSchema } from '@/schemas/auditoria';
-import { getOnPageService } from '@/lib/dataforseo/onpage';
+
 import { getLighthouseService } from '@/lib/dataforseo/lighthouse';
+import { getOnPageService } from '@/lib/dataforseo/onpage';
 import { getEmailService } from '@/lib/email/resend';
+import { auditoriaFormSchema } from '@/schemas/auditoria';
 
 /**
  * POST /api/auditoria/submit
@@ -38,7 +39,7 @@ export async function POST(request: NextRequest) {
           languageCode: 'es',
           pingbackUrl,
           tag: `lighthouse_${Date.now()}_${validatedData.email}`,
-        }
+        },
       );
     } catch (error) {
       console.error('Error creating Lighthouse task:', error);
@@ -66,7 +67,7 @@ export async function POST(request: NextRequest) {
         estimatedTime: 15, // minutos
         statusUrl,
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error('Error in /api/auditoria/submit:', error);
@@ -79,7 +80,7 @@ export async function POST(request: NextRequest) {
           message: 'Datos inválidos. Por favor verifica el formulario.',
           errors: error,
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -91,7 +92,7 @@ export async function POST(request: NextRequest) {
           message:
             'Error al conectar con el servicio de auditoría. Por favor intenta de nuevo.',
         },
-        { status: 503 }
+        { status: 503 },
       );
     }
 
@@ -101,7 +102,7 @@ export async function POST(request: NextRequest) {
         success: false,
         message: 'Error al procesar la solicitud. Por favor intenta de nuevo.',
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

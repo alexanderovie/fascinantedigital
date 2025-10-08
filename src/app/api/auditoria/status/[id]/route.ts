@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+
 import { getOnPageService } from '@/lib/dataforseo/onpage';
 
 /**
@@ -7,7 +8,7 @@ import { getOnPageService } from '@/lib/dataforseo/onpage';
  */
 export async function GET(
   request: NextRequest,
-  context: { params: Promise<{ id: string }> }
+  context: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await context.params;
@@ -18,7 +19,7 @@ export async function GET(
           success: false,
           message: 'Task ID is required',
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -61,7 +62,7 @@ export async function GET(
           message: 'Audit not found or still initializing',
           status: 'pending',
         },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -71,7 +72,7 @@ export async function GET(
         message: 'Error getting audit status',
         error: error instanceof Error ? error.message : 'Unknown error',
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
