@@ -16,18 +16,21 @@ export default function Hero() {
         </BorderedSection>
         <div className="container mx-auto pt-16 pb-12 text-center md:pt-20 lg:pt-28">
           <h1 className="mx-auto max-w-[500px] text-[2.5rem] leading-[1.2] tracking-[-1.6px] text-balance md:text-[4rem] md:!leading-[1.15] md:tracking-[-4.32px] lg:text-7xl">
-            Ve Cómo te Ve Google AHORA
+            Haz que tu Negocio Brille en Google
           </h1>
           <p className="text-muted-foreground mx-auto mt-5 max-w-[500px] leading-[1.5] tracking-[-0.32px] md:mt-6">
-            Tu posición real en Google con métricas en tiempo real, mapas
-            locales, fragmentos destacados y comparación con competidores.
+            Te ayudamos a destacar en Google y atraer más clientes con
+            estrategias simples, efectivas y basadas en datos reales.
           </p>
           <Button asChild className="mt-6 gap-1 md:mt-8 lg:mt-10">
             <Link href="/contact">
-              Obtener Reporte Gratis
+              Analizar Mi Negocio
               <ChevronRight className="size-4" />
             </Link>
           </Button>
+          <p className="text-muted-foreground mx-auto mt-4 text-sm">
+            Más de 300 marcas latinas ya crecen con nosotros
+          </p>
         </div>
         <BorderedSection className="border-r-0 border-l 2xl:flex-1">
           <DiagonalPattern />
