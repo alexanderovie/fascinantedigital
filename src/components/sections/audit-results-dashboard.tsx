@@ -248,7 +248,11 @@ const AuditResultsDashboard = ({
     if (!isComplete || loadingData) return;
 
     setLoadingData(true);
-    const targetUrl = summary.domain_info?.name || '';
+    // Asegurar que la URL tiene el protocolo https://
+    let targetUrl = summary.domain_info?.name || '';
+    if (targetUrl && !targetUrl.startsWith('http')) {
+      targetUrl = `https://${targetUrl}`;
+    }
 
     try {
       // Cargar todos los datos en paralelo
