@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 
 import LoginSection from '@/components/sections/login-section';
 
+// Forzar renderizado dinámico para páginas con autenticación
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Iniciar Sesión',
   description: 'Inicia sesión en tu cuenta de Fascinante Digital.',

@@ -35,6 +35,7 @@ const Partners = () => {
             <Image
               src={partner.logo}
               alt={`${partner.name} logo`}
+              title={`Logo de ${partner.name}`}
               width={109}
               height={48}
               className="object-contain"

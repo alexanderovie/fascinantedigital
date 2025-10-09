@@ -36,10 +36,10 @@ export async function GET(
     // Calcular estadísticas de enlaces
     const stats = {
       total: links.length,
-      internal: links.filter((l: any) => l.internal).length,
-      external: links.filter((l: any) => !l.internal).length,
-      dofollow: links.filter((l: any) => l.dofollow).length,
-      nofollow: links.filter((l: any) => !l.dofollow).length,
+      internal: links.filter((l: any) => l.direction === 'internal').length,
+      external: links.filter((l: any) => l.direction === 'external').length,
+      dofollow: links.filter((l: any) => l.dofollow === true).length,
+      nofollow: links.filter((l: any) => l.dofollow === false).length,
     };
 
     return NextResponse.json({

@@ -29,12 +29,21 @@ export async function GET(
     const onPageService = getOnPageService();
     const keywords = await onPageService.getKeywordDensity(id, url, length);
 
+    // Manejar cuando DataForSEO devuelve null o array vacío
+    // Esto es normal cuando hay pocas páginas analizadas
+    const keywordsArray =
+      Array.isArray(keywords) && keywords.length > 0 ? keywords : [];
+
     return NextResponse.json({
       success: true,
       taskId: id,
       url,
       keywordLength: length,
-      keywords,
+      keywords: keywordsArray,
+      note:
+        keywordsArray.length === 0
+          ? 'No hay suficientes datos para análisis de palabras clave. Intenta aumentar el número de páginas analizadas.'
+          : undefined,
     });
   } catch (error) {
     console.error('Error fetching keywords:', error);

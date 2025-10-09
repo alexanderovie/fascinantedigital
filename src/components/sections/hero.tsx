@@ -58,7 +58,8 @@ export default function Hero() {
         <div className={`container !pt-0 lg:!p-1.5`}>
           <Image
             src="/images/homepage/hero.png"
-            alt="Hero"
+            alt="Dashboard de auditoría SEO mostrando análisis de sitio web con métricas de rendimiento y optimización"
+            title="Herramienta de auditoría SEO de Fascinante Digital"
             className="mx-auto rounded-xl border object-contain p-1 shadow-lg 2xl:max-w-[1092px] dark:invert"
             width={1000}
             height={600}

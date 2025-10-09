@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 
 import SignupSection from '@/components/sections/signup-section';
 
+// Forzar renderizado dinámico para páginas con autenticación
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Registrarse',
   description:

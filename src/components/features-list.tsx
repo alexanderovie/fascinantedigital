@@ -78,6 +78,7 @@ const FeaturesList = () => {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    title={item.description}
                     width={400}
                     height={510}
                     sizes="(max-width: 640px) 280px, (max-width: 768px) 300px, 400px"

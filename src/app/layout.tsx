@@ -8,6 +8,9 @@ import Footer from '@/components/sections/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
+// Forzar renderizado dinámico para evitar problemas con ThemeProvider durante SSG
+export const dynamic = 'force-dynamic';
+
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',

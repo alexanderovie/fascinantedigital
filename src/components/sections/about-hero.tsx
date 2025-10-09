@@ -12,8 +12,8 @@ const AboutHero = () => {
                 Impulsando productividad con propósito
               </h1>
               <p className="text-muted-foreground mt-6 tracking-[-0.32px]">
-                Nuestra misión es desbloquear el potencial creando herramientas
-                que eleven la productividad y fomenten la colaboración perfecta.
+                Ayudamos a negocios latinos a crecer con herramientas simples
+                que traen más clientes desde internet.
               </p>
             </div>
             <div className="relative mt-10 aspect-[3/3.25] overflow-hidden md:mt-14 lg:mr-8 lg:mb-10 lg:ml-2">
@@ -47,12 +47,10 @@ const AboutHero = () => {
               </div>
             </div>
             <p className="text-muted-foreground mt-10 px-4 tracking-[-0.32px] md:mt-14">
-              Nuestra misión es permitir que individuos y equipos logren su
-              mejor trabajo entregando herramientas innovadoras que simplican
-              flujos de trabajo, mejoran la colaboración e impulsan resultados
-              impactantes. Estamos dedicados a crear una experiencia de
-              productividad perfecta que ayuda a las personas a prosperar en su
-              trabajo y alcanzar nuevas alturas.
+              Trabajamos con datos reales de Google para ayudarte a entender qué
+              buscan tus clientes y cómo aparecer primero. Todo lo hacemos
+              simple, claro y sin complicaciones técnicas. Tu negocio crece,
+              nosotros te mostramos el camino.
             </p>
           </div>
         </div>

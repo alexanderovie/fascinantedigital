@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 
 import Contact from '@/components/sections/contact';
 
+// Forzar renderizado dinámico para páginas con formularios
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Contacto',
   description:
